@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <meta name="baidu-site-verification" content="rPvaZ60H4L" />
+
+    <script>
+        if (window.screen.width < 640) {
+            window.location.href = "/indexPhone.html";
+        }
+    </script>
+
+    <title><%= commonData.title %></title>
+    <% include common/title.ejs %>
+
+    <link rel="stylesheet" href="/css/index.css" type="text/css">
+    <link rel="stylesheet" href="/plugs/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+</head>
+<body>
+<div id="container">
+    <!--header-->
+    <% include common/header.ejs %>
+
+    <div class="content">
+        <!--轮播图-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+                <% for(var i = 0;i < banner.length;i++){ %>
+                <div class="swiper-slide">
+                    <a href="<%= banner[i].url %>" target="_blank"><img src="<%= banner[i].imgUrl %>"></a>
+                </div>
+                <% } %>
+
+            </div>
+            <div class="pagination"></div>
+        </div>
+
+        <!-- 二维码追溯系统 -->
+        <div class="part trace">
+            <div class="content">
+                <h3 class="title">二维码追溯系统</h3>
+
+                <p class="desc">通过一物一码，借助物联网技术和移动互联网技术，实现企业生产+流通+销售的管理</p>
+
+                <div class="trace-info">
+                    <ul class="info-left">
+                        <li>企业产品赋码，建立唯一ID</li>
+                        <li>一物一码贯通生产/仓储/流通/销售环节</li>
+                        <li>建立渠道流通移动化办公管理</li>
+                        <li>打造新零售营销场景，提升终端动销率</li>
+                        <li>完善企业产品在各个阶段的数据，提供决策依据</li>
+                    </ul>
+
+                    <a class="info-right" href="/traceback.html">
+                        <img src="/images/1/1_16.png" alt="查看详情" />
+                    </a>
+                </div>
+
+                <div class="trace-step">
+                    <div class="step-item">
+                        <div class="item-img">
+                            <img class="item-bg" src="/images/1/1_17.png" />
+                            <img class="item-icon" src="/images/1/1_17_1.png" />
+                        </div>
+
+                        <p class="item-text">供应链溯源</p>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="item-img">
+                            <img class="item-bg" src="/images/1/1_17.png" />
+                            <img class="item-icon" src="/images/1/1_17_2.png" />
+                        </div>
+
+                        <p class="item-text">产品质量溯源</p>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="item-img">
+                            <img class="item-bg" src="/images/1/1_17.png" />
+                            <img class="item-icon" src="/images/1/1_17_3.png" />
+                        </div>
+
+                        <p class="item-text">均衡生产</p>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="item-img">
+                            <img class="item-bg" src="/images/1/1_17.png" />
+                            <img class="item-icon" src="/images/1/1_17_4.png" />
+                        </div>
+
+                        <p class="item-text">防窜货管理</p>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="item-img">
+                            <img class="item-bg" src="/images/1/1_17.png" />
+                            <img class="item-icon" src="/images/1/1_17_5.png" />
+                        </div>
+
+                        <p class="item-text">经销商业务管理</p>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="item-img">
+                            <img class="item-bg" src="/images/1/1_17.png" />
+                            <img class="item-icon" src="/images/1/1_17_6.png" />
+                        </div>
+
+                        <p class="item-text">业务员绩效管理</p>
+                    </div>
+
+                    <div class="step-item step-last">
+                        <div class="item-img">
+                            <img class="item-bg" src="/images/1/1_17.png" />
+                            <img class="item-icon" src="/images/1/1_17_7.png" />
+                        </div>
+
+                        <p class="item-text">智慧营销</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 智慧营销 -->
+        <div class="part product">
+            <div class="product-top">
+                <h3 class="title">智慧营销</h3>
+
+                <p class="desc">以产品二维码为入口，基于一物一码追踪追溯大数据，结合线下营销场景，建立企业与销售员、品牌与消费者之间的互动营销</p>
+            </div>
+
+            <div class="product-nav">
+                <ul class="nav-list">
+                    <li>
+                        <p>渠道营销</p>
+                        <img src="/images/1/1_24.png" />
+                    </li>
+
+                    <li>
+                        <p>消费互动营销</p>
+                        <img src="/images/1/1_25.png" />
+                    </li>
+
+                    <li>
+                        <p>CRM</p>
+                        <img src="/images/1/1_26.png" />
+                    </li>
+
+                    <li>
+                        <p>大数据统计</p>
+                        <img src="/images/1/1_27.png" />
+                    </li>
+                </ul>
+            </div>
+
+            <div class="product-con product-con1">
+                <a class="con-img" href="/smartMarketing.html">
+                    <img src="/images/1/1_33.png" />
+                </a>
+
+                <div class="con-right">
+                    <ul class="right-info">
+                        <li>
+                            <span>店主：</span>
+                            累计奖、开箱奖、达标奖、返利奖
+                        </li>
+
+                        <li>
+                            <span>促销员：</span>
+                            返利奖、达标奖、累计奖
+                        </li>
+
+                        <li>
+                            对不同的角色设置不同的返利促销活动，精准抓住不同角色的需求最大拉动渠道推销产品的积极性
+                        </li>
+                    </ul>
+
+                    <a class="detail-btn" href="/smartMarketing.html">查看详情 > ></a>
+                </div>
+            </div>
+
+            <div class="product-con product-con2" style="display: none;">
+                <a class="con-img" href="/smartMarketing.html">
+                    <img src="/images/1/1_34.png" />
+                </a>
+
+                <div class="con-right">
+                    <ul class="right-info">
+                        <li>
+                            <span>活动设置：</span>
+                        </li>
+
+                        <li style="background-image: none;">
+                            活动时间、活动方式、奖品方式、中奖概率、活动区域等后台灵活设置、精准投放
+                        </li>
+
+                        <li>
+                            <span>活动形式：</span>
+                        </li>
+
+                        <li style="background-image: none;">
+                            红包奖励，积分奖励，实物抽奖，裂变红包，游戏红包，传播游戏
+                        </li>
+                    </ul>
+
+                    <a class="detail-btn" href="/smartMarketing.html">查看详情 > ></a>
+                </div>
+            </div>
+
+            <div class="product-con product-con3" style="display: none;">
+                <a class="con-img" href="/smartMarketing.html">
+                    <img src="/images/1/1_35.png" />
+                </a>
+
+                <div class="con-right">
+                    <ul class="right-info">
+                        <li>
+                            分析：会员年龄、地区、性别、职业分布；产品、消费场景、活动、奖品偏好
+                        </li>
+
+                        <li>
+                            根据用户对商品扫码的时间、频率、数量进行分组，衡量用户对品牌方的价值
+                        </li>
+
+                        <li>
+                            ①高价值用户：高频高额；<br />
+                            ②潜在用户：高频低额；<br />
+                            ③低频用户：低频高额；<br />
+                            ④非活跃用户：低频低额
+                        </li>
+                    </ul>
+
+                    <a class="detail-btn" href="/smartMarketing.html">查看详情 > ></a>
+                </div>
+            </div>
+
+            <div class="product-con product-con4" style="display: none;">
+                <a class="con-img" href="/smartMarketing.html">
+                    <img src="/images/1/1_36.png" />
+                </a>
+
+                <div class="con-right">
+                    <ul class="right-info">
+                        <li>
+                            扫码数量统计
+                        </li>
+
+                        <li>
+                            会员粉丝统计
+                        </li>
+
+                        <li>
+                            营销费用统计
+                        </li>
+
+                        <li>
+                            业务员业绩统计
+                        </li>
+
+                        <li>
+                            销区销量实时统计
+                        </li>
+
+                        <li>
+                            窜货实时监控等
+                        </li>
+
+                        <li>
+                            让企业每一分营销费用都“精确到人，精准落地”
+                        </li>
+                    </ul>
+
+                    <a class="detail-btn" href="/smartMarketing.html">查看详情 > ></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 案例 -->
+        <div class="part case">
+            <div class="case-list">
+                <% for(var i = 0;i < caseList.length;i++) { %>
+                <a class="case-item" href="/caseDetail-<%= caseList[i].id %>.html">
+                    <img class="case-bg" src="<%= caseList[i].imgUrl %>" />
+
+                    <div class="case-hover">
+                        <img class="hover-img" src="<%= caseList[i].logoUrl %>" />
+                        <p class="hover-tit"><%= caseList[i].title %></p>
+                    </div>
+                </a>
+                <% } %>
+            </div>
+        </div>
+
+        <!--新闻资讯-->
+        <div class="part news">
+            <div class="content">
+                <h3 class="title">新闻资讯</h3>
+
+                <ul class="newsNav">
+                    <li>
+                        <img class="news-icon news-icon1" src="/images/1/1_77.png" />
+                        <img class="news-icon news-icon2" src="/images/1/1_78.png" />
+                        <span>公司新闻</span>
+                    </li>
+
+                    <li class="active">
+                        <img class="news-icon news-icon1" src="/images/1/1_79.png" />
+                        <img class="news-icon news-icon2" src="/images/1/1_80.png" />
+                        <span>行业动态</span>
+                    </li>
+                </ul>
+
+                <div class="navLi" style="display: none;">
+                    <div class="list-top">
+                        <% if(indexNews1.hotNews.length > 0) { %>
+                            <% for(var i = 0;i < indexNews1.hotNews.length;i++) { %>
+                                <% if(i == 2) { %>
+                                <a class="hot-item" href="/news-companyNews-<%= indexNews1.hotNews[i].id %>.html" style="margin-right: 0;">
+                                    <img class="hot-thumbnail" src="<%= indexNews1.hotNews[i].thumbnail %>"/>
+
+                                    <div class="hot-bottom">
+                                        <p class="hot-title"><%= indexNews1.hotNews[i].title %></p>
+
+                                        <p class="hot-time">
+                                            <span class="time-md"><%= indexNews1.hotNews[i].publishTime.split('-')[1] + '.' + indexNews1.hotNews[i].publishTime.split('-')[2] %></span>
+                                            <span><%= indexNews1.hotNews[i].publishTime.split('-')[0] %></span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <% } else { %>
+                                <a class="hot-item" href="/news-companyNews-<%= indexNews1.hotNews[i].id %>.html">
+                                    <img class="hot-thumbnail" src="<%= indexNews1.hotNews[i].thumbnail %>"/>
+
+                                    <div class="hot-bottom">
+                                        <p class="hot-title"><%= indexNews1.hotNews[i].title %></p>
+
+                                        <p class="hot-time">
+                                            <span class="time-md"><%= indexNews1.hotNews[i].publishTime.split('-')[1] + '.' + indexNews1.hotNews[i].publishTime.split('-')[2] %></span>
+                                            <span><%= indexNews1.hotNews[i].publishTime.split('-')[0] %></span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <% } %>
+                            <% } %>
+                        <% } %>
+                    </div>
+
+                    <div class="list-con">
+                        <% if(indexNews1.newsList.length > 0) { %>
+                            <% for(var j = 0;j < indexNews1.newsList.length;j++) { %>
+                                <% if(j % 3 == 0) { %>
+                                <a class="list-item" href="/news-companyNews-<%= indexNews1.newsList[j].id %>.html" style="margin-left: 0;">
+                                    <div class="list-left">
+                                        <span class="date"><%= indexNews1.newsList[j].publishTime.split("-")[2] %></span>
+                                        <span><%= indexNews1.newsList[j].publishTime.split("-")[0] %>.<%= indexNews1.newsList[j].publishTime.split("-")[1] %></span>
+                                    </div>
+
+                                    <div class="list-right">
+                                        <p class="right-tit"><%= indexNews1.newsList[j].title %></p>
+                                        <p class="right-desc"><%= indexNews1.newsList[j].desc %></p>
+                                    </div>
+                                </a>
+                                <% } else { %>
+                                <a class="list-item" href="/news-companyNews-<%= indexNews1.newsList[j].id %>.html">
+                                    <div class="list-left">
+                                        <span class="date"><%= indexNews1.newsList[j].publishTime.split("-")[2] %></span>
+                                        <span><%= indexNews1.newsList[j].publishTime.split("-")[0] %>.<%= indexNews1.newsList[j].publishTime.split("-")[1] %></span>
+                                    </div>
+
+                                    <div class="list-right">
+                                        <p class="right-tit"><%= indexNews1.newsList[j].title %></p>
+                                        <p class="right-desc"><%= indexNews1.newsList[j].desc %></p>
+                                    </div>
+                                </a>
+                                <% } %>
+                            <% } %>
+                        <% } %>
+                    </div>
+                </div>
+
+                <div class="navLi">
+                    <div class="list-top">
+                        <% if(indexNews2.hotNews.length > 0) { %>
+                        <% for(var i = 0;i < indexNews2.hotNews.length;i++) { %>
+                        <% if(i == 2) { %>
+                        <a class="hot-item" href="/news-dynamic-<%= indexNews2.hotNews[i].id %>.html" style="margin-right: 0;">
+                            <img class="hot-thumbnail" src="<%= indexNews2.hotNews[i].thumbnail %>"/>
+
+                            <div class="hot-bottom">
+                                <p class="hot-title"><%= indexNews2.hotNews[i].title %></p>
+
+                                <p class="hot-time">
+                                    <span class="time-md"><%= indexNews2.hotNews[i].publishTime.split('-')[1] + '.' + indexNews2.hotNews[i].publishTime.split('-')[2] %></span>
+                                    <span><%= indexNews2.hotNews[i].publishTime.split('-')[0] %></span>
+                                </p>
+                            </div>
+                        </a>
+                        <% } else { %>
+                        <a class="hot-item" href="/news-dynamic-<%= indexNews2.hotNews[i].id %>.html">
+                            <img class="hot-thumbnail" src="<%= indexNews2.hotNews[i].thumbnail %>"/>
+
+                            <div class="hot-bottom">
+                                <p class="hot-title"><%= indexNews2.hotNews[i].title %></p>
+
+                                <p class="hot-time">
+                                    <span class="time-md"><%= indexNews2.hotNews[i].publishTime.split('-')[1] + '.' + indexNews2.hotNews[i].publishTime.split('-')[2] %></span>
+                                    <span><%= indexNews2.hotNews[i].publishTime.split('-')[0] %></span>
+                                </p>
+                            </div>
+                        </a>
+                        <% } %>
+                        <% } %>
+                        <% } %>
+                    </div>
+
+                    <div class="list-con">
+                        <% if(indexNews2.newsList.length > 0) { %>
+                        <% for(var j = 0;j < indexNews2.newsList.length;j++) { %>
+                        <% if(j % 3 == 0) { %>
+                        <a class="list-item" href="/news-dynamic-<%= indexNews2.newsList[j].id %>.html" style="margin-left: 0;">
+                            <div class="list-left">
+                                <span class="date"><%= indexNews2.newsList[j].publishTime.split("-")[2] %></span>
+                                <span><%= indexNews2.newsList[j].publishTime.split("-")[0] %>.<%= indexNews2.newsList[j].publishTime.split("-")[1] %></span>
+                            </div>
+
+                            <div class="list-right">
+                                <p class="right-tit"><%= indexNews2.newsList[j].title %></p>
+                                <p class="right-desc"><%= indexNews2.newsList[j].desc %></p>
+                            </div>
+                        </a>
+                        <% } else { %>
+                        <a class="list-item" href="/news-dynamic-<%= indexNews2.newsList[j].id %>.html">
+                            <div class="list-left">
+                                <span class="date"><%= indexNews2.newsList[j].publishTime.split("-")[2] %></span>
+                                <span><%= indexNews2.newsList[j].publishTime.split("-")[0] %>.<%= indexNews2.newsList[j].publishTime.split("-")[1] %></span>
+                            </div>
+
+                            <div class="list-right">
+                                <p class="right-tit"><%= indexNews2.newsList[j].title %></p>
+                                <p class="right-desc"><%= indexNews2.newsList[j].desc %></p>
+                            </div>
+                        </a>
+                        <% } %>
+                        <% } %>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% include common/footer.ejs %>
+    <% include common/rightBar.ejs %>
+    <% include common/coopIntention.ejs %>
+</div>
+
+<script src="/js/lib/jquery.min.js" type="text/javascript"></script>
+<script src="/js/lib/easing.js" type="text/javascript"></script>
+<script src="/js/lib/swiper.js" type="text/javascript"></script>
+<script src="/js/lib/backTop.js" type="text/javascript"></script>
+<script src="/js/lib/common.js" type="text/javascript"></script>
+<script src="/js/lib/rightBar.js" type="text/javascript"></script>
+<script src="/js/index.js" type="text/javascript"></script>
+
+<% include common/baidu.ejs %>
+
+<script type="text/javascript">
+    main.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,1258 @@
+/* 新增一些iPhone下不兼容的动画库 */
+/*
+ * 1.从左向右出动画
+*/
+@-webkit-keyframes left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes left {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@-o-keyframes left {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+/*
+ * 2.从右向左出动画
+*/
+@-webkit-keyframes right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes right {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@-o-keyframes right {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+/*
+ * 3.从上向下出动画
+*/
+@-webkit-keyframes down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-150px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes down {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-150px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-o-keyframes down {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-150px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+/*
+ * 4.从下往上出动画
+*/
+@-webkit-keyframes up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(150px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes up {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(150px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-o-keyframes up {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(150px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+/*
+ * 5.上下浮动动画1
+ * 0%从零开始可以实现先淡入后动画的无缝衔接效果，图片可以先加淡入动画，再通过js给它加上漂浮效果
+ * 所有漂浮动画都会有一种突兀显示的效果，可以先让图片淡入，然后再加动画（一定要加上反向属性alternate才那实现无缝循环动画）
+*/
+@-webkit-keyframes upDown1 {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+  }
+}
+@-moz-keyframes upDown1 {
+  0% {
+    -moz-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+  }
+}
+@-o-keyframes upDown1 {
+  0% {
+    -o-transform: translateY(0);
+  }
+  100% {
+    -o-transform: translateY(10px);
+  }
+}
+/*
+ * 6.上下浮动动画2
+ * 0%从零开始可以实现先淡入后动画的无缝衔接效果，图片可以先加淡入动画，再通过js给它加上漂浮效果
+ * 所有漂浮动画都会有一种突兀显示的效果，可以先让图片淡入，然后再加动画（一定要加上反向属性alternate才那实现无缝循环动画）
+*/
+@-webkit-keyframes upDown2 {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+  }
+}
+@-moz-keyframes upDown2 {
+  0% {
+    -moz-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+  }
+}
+@-o-keyframes upDown2 {
+  0% {
+    -o-transform: translateY(0);
+  }
+  100% {
+    -o-transform: translateY(20px);
+  }
+}
+/*
+ * 7.上下浮动动画3
+ * 0%从零开始可以实现先淡入后动画的无缝衔接效果，图片可以先加淡入动画，再通过js给它加上漂浮效果
+ * 所有漂浮动画都会有一种突兀显示的效果，可以先让图片淡入，然后再加动画（一定要加上反向属性alternate才那实现无缝循环动画）
+*/
+@-webkit-keyframes upDown3 {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(30px);
+  }
+}
+@-moz-keyframes upDown3 {
+  0% {
+    -moz-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(30px);
+  }
+}
+@-o-keyframes upDown3 {
+  0% {
+    -o-transform: translateY(0);
+  }
+  100% {
+    -o-transform: translateY(30px);
+  }
+}
+/*
+ * 8.左右浮动动画1
+ * 0%从零开始可以实现先淡入后动画的无缝衔接效果，图片可以先加淡入动画，再通过js给它加上漂浮效果
+ * 所有漂浮动画都会有一种突兀显示的效果，可以先让图片淡入，然后再加动画（一定要加上反向属性alternate才那实现无缝循环动画）
+*/
+@-webkit-keyframes leftRight1 {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+  }
+}
+@-moz-keyframes leftRight1 {
+  0% {
+    -moz-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+  }
+}
+@-o-keyframes leftRight1 {
+  0% {
+    -o-transform: translateX(0);
+  }
+  100% {
+    -o-transform: translateX(10px);
+  }
+}
+/*
+ * 9.左右浮动动画2
+ * 0%从零开始可以实现先淡入后动画的无缝衔接效果，图片可以先加淡入动画，再通过js给它加上漂浮效果
+ * 所有漂浮动画都会有一种突兀显示的效果，可以先让图片淡入，然后再加动画（一定要加上反向属性alternate才那实现无缝循环动画）
+*/
+@-webkit-keyframes leftRight2 {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(20px);
+  }
+}
+@-moz-keyframes leftRight2 {
+  0% {
+    -moz-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(20px);
+  }
+}
+@-o-keyframes leftRight2 {
+  0% {
+    -o-transform: translateX(0);
+  }
+  100% {
+    -o-transform: translateX(20px);
+  }
+}
+/*
+ * 10.左右浮动动画3
+ * 0%从零开始可以实现先淡入后动画的无缝衔接效果，图片可以先加淡入动画，再通过js给它加上漂浮效果
+ * 所有漂浮动画都会有一种突兀显示的效果，可以先让图片淡入，然后再加动画（一定要加上反向属性alternate才那实现无缝循环动画）
+*/
+@-webkit-keyframes leftRight3 {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(30px);
+  }
+}
+@-moz-keyframes leftRight3 {
+  0% {
+    -moz-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(30px);
+  }
+}
+@-o-keyframes leftRight3 {
+  0% {
+    -o-transform: translateX(0);
+  }
+  100% {
+    -o-transform: translateX(30px);
+  }
+}
+@-webkit-keyframes rotateItem {
+  0% {
+    -webkit-transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+  }
+}
+@-webkit-keyframes widthItem_1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 31px;
+  }
+}
+@-webkit-keyframes widthItem_2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 106px;
+  }
+}
+@-webkit-keyframes widthItem_3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 273px;
+  }
+}
+@-webkit-keyframes scaleItem {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+  }
+}
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+  }
+}
+@-webkit-keyframes rotateInfinite {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+body,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  color: #333;
+  font: normal normal normal 28px/40px 'Microsoft YaHei', Arial, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz--tap-highlight-color: rgba(0, 0, 0, 0);
+  -o--tap-highlight-color: rgba(0, 0, 0, 0);
+}
+img {
+  border: 0;
+}
+input[type="text"],
+input[type="password"],
+textarea,
+button {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+table {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td {
+  padding: 0;
+}
+textarea {
+  resize: none;
+}
+body {
+  max-width: 768px;
+  margin: 0 auto;
+  position: relative;
+}
+.clearFix:before,
+.clearFix:after {
+  content: " ";
+  display: table;
+}
+.clearFix:after {
+  clear: both;
+}
+.pullLeft {
+  float: left;
+}
+.pullRight {
+  float: right;
+}
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.ellipsisNormal {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html {
+  width: 100%;
+  min-height: 100%;
+}
+.fullPage-wp {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.fullPage-wp:after {
+  display: block;
+  content: ' ';
+  height: 0;
+  clear: both;
+}
+.fullPage-wp.anim {
+  -webkit-transition: all 200ms ease-out 0s;
+  transition: all 200ms ease-out 0s;
+}
+.fullPage-page {
+  display: block;
+  overflow: hidden;
+}
+.fullPage-dir-h {
+  float: left;
+}
+.wp {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  right: 0;
+  bottom: 75px;
+  overflow: hidden;
+}
+.page {
+  position: relative;
+  overflow: hidden;
+}
+/*#musicBtn {
+    width: 50px;
+    height: 50px;
+    background: url("../images/music-0.png") no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.pause {
+    background-image: url("../images/music-1.png") !important;
+}*/
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+}
+.loading .loadCon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  margin-left: -90px;
+  margin-top: -90px;
+}
+.loading .loadCon img {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.loading .loadCon #percent {
+  position: absolute;
+  top: 63px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  color: #000;
+}
+@-webkit-keyframes load {
+  0% {
+    -webkit-transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes start {
+  0%,
+  30% {
+    opacity: 0.2;
+    transform: translate(0, 10px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translate(0, -5px);
+  }
+}
+@-webkit-keyframes shanShuo {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+}
+.start {
+  position: fixed;
+  left: 50%;
+  margin-left: -17px;
+  top: 95%;
+  margin-top: -34px;
+  width: 34px;
+  height: 34px;
+}
+.start b {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  margin-left: -18px;
+  width: 37px;
+  height: 24px;
+  background: url("/images/phone/arrow.png");
+  background-size: 100% 100%;
+  -webkit-animation: start 1.5s infinite ease-in-out;
+  animation: start 1.5s infinite ease-in-out;
+}
+/*.arrow {
+    position: fixed;
+    top: 93%;
+    left: 46%;
+    z-index: 10;
+
+    width: 8%;
+
+    -webkit-animation: start 1.5s infinite ease-in-out;
+    animation: start 1.5s infinite ease-in-out;
+}*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+#container .header {
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  padding: 14px 0;
+  background: #1a2d6f;
+}
+#container .header:before,
+#container .header:after {
+  content: " ";
+  display: table;
+}
+#container .header:after {
+  clear: both;
+}
+#container .header .logo {
+  float: left;
+  margin-left: 30px;
+}
+#container .header .cate {
+  float: right;
+  margin-right: 30px;
+  margin-top: 11px;
+}
+#container .header .cate-list {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  z-index: 10;
+  display: none;
+  padding: 0 30px;
+  background: url('https://pop.letsun.com.cn/letsunImage/phone/1/1_15.png') no-repeat;
+  background-size: 100% 100%;
+}
+#container .header .cate-list .cate-item {
+  width: 150px;
+  height: 66px;
+  line-height: 66px;
+  font-size: 30px;
+  color: #676664;
+  text-align: center;
+  border-bottom: 1px solid #1a2d6f;
+  cursor: pointer;
+}
+#container .header .cate-list .cate-item:last-child {
+  border-bottom: 0;
+}
+#container .header .cate-list .active {
+  color: #1a2d6f;
+}
+#container .wp {
+  background: url('https://pop.letsun.com.cn/letsunImage/phone/bg.png') no-repeat;
+  background-size: 100% 100%;
+}
+#container .wp .page1 {
+  position: relative;
+}
+#container .wp .page1 .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+#container .wp .page1 .swiper-container .swiper-slide {
+  height: 100%;
+}
+#container .wp .page1 .swiper-container .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#container .wp .page1 .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  border-radius: 100%;
+  opacity: 1;
+  border: 1px solid #fff;
+  background: none;
+}
+#container .wp .page1 .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+  background: #fff;
+}
+#container .wp .page1 .arrow {
+  position: absolute;
+  left: 45%;
+  bottom: 60px;
+  z-index: 10;
+  width: 10%;
+  -webkit-animation: start 1.5s infinite ease-in-out;
+  animation: start 1.5s infinite ease-in-out;
+}
+#container .wp .page2 .ani {
+  display: none;
+}
+#container .wp .page2 img {
+  position: absolute;
+  z-index: 1;
+}
+#container .wp .page2 .img1 {
+  left: 25%;
+  top: 4%;
+  width: 50%;
+}
+#container .wp .page2 .img2 {
+  top: 14%;
+}
+#container .wp .page2 .img3 {
+  top: 13%;
+  width: 86%;
+}
+#container .wp .page2 .img5 {
+  top: 35%;
+  width: 86%;
+}
+#container .wp .page2 .img4 {
+  top: 36%;
+}
+#container .wp .page2 .img6 {
+  top: 57%;
+}
+#container .wp .page2 .img7 {
+  top: 56%;
+  width: 86%;
+}
+#container .wp .page2 .img8 {
+  top: 79%;
+  width: 86%;
+}
+#container .wp .page2 .img9 {
+  top: 78%;
+  width: 86%;
+}
+#container .wp .page2 .img2,
+#container .wp .page2 .img4,
+#container .wp .page2 .img6,
+#container .wp .page2 .img8 {
+  width: 22%;
+  z-index: 2;
+}
+#container .wp .page2 .img3,
+#container .wp .page2 .img5,
+#container .wp .page2 .img7,
+#container .wp .page2 .img9 {
+  left: 7%;
+}
+#container .wp .page2 .img2,
+#container .wp .page2 .img6 {
+  left: 7%;
+}
+#container .wp .page2 .img4,
+#container .wp .page2 .img8 {
+  right: 7%;
+}
+#container .wp .page3 .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper {
+  height: 100%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide {
+  position: relative;
+  height: 100%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_1 img {
+  position: absolute;
+  z-index: 1;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_1 .img1 {
+  left: 25%;
+  top: 3%;
+  width: 50%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_1 .img2 {
+  left: 10%;
+  top: 10%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_1 .img3 {
+  left: 10%;
+  top: 37%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_1 .img4 {
+  left: 21%;
+  top: 73%;
+  z-index: 2;
+  width: 17%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_1 .img5 {
+  right: 21%;
+  top: 73%;
+  z-index: 2;
+  width: 17%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_1 .img6 {
+  left: 21%;
+  top: 73%;
+  z-index: 2;
+  width: 17%;
+  -webkit-animation: rotateInfinite 2s linear forwards infinite;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_1 .img7 {
+  right: 21%;
+  top: 73%;
+  z-index: 2;
+  width: 17%;
+  -webkit-animation: rotateInfinite 2s linear forwards infinite;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_1 .img8 {
+  right: 21%;
+  top: 73%;
+  z-index: 2;
+  width: 17%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_1 .img9 {
+  left: 21%;
+  top: 73%;
+  z-index: 2;
+  width: 17%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_1 .img10 {
+  left: 10%;
+  top: 70%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_2 img {
+  position: absolute;
+  z-index: 2;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_2 .img1 {
+  left: 25%;
+  top: 3%;
+  width: 50%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_2 .img2 {
+  left: 10%;
+  top: 12%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_2 .img3,
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_2 .img4,
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_2 .img5,
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_2 .img6,
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_2 .img7,
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_2 .img8 {
+  left: 10%;
+  top: 43%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_2 .img8 {
+  z-index: 1;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_3 img {
+  position: absolute;
+  z-index: 1;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_3 .img1 {
+  left: 25%;
+  top: 3%;
+  width: 50%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_3 .img2 {
+  left: 10%;
+  top: 10%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_3 .img3 {
+  left: 10%;
+  top: 48%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_3 .img4 {
+  left: 10%;
+  top: 60%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_4 img {
+  position: absolute;
+  z-index: 1;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_4 .img1 {
+  left: 25%;
+  top: 3%;
+  width: 50%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_4 .img2 {
+  left: 10%;
+  top: 10%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_4 .img3 {
+  left: 10%;
+  top: 48%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_5 img {
+  position: absolute;
+  z-index: 1;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_5 .img1 {
+  left: 25%;
+  top: 2%;
+  width: 50%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_5 .img2 {
+  left: 10%;
+  top: 12%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_5 .img3,
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_5 .img4 {
+  left: 10%;
+  top: 25%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 {
+  /*.line1 {
+							left: 29.5%;
+							top: 52%;
+
+							img {
+								width: 31px;
+								height: 20px;
+							}
+						}
+
+						.line2 {
+							left: 29.5%;
+							top: 61%;
+
+							img {
+								width: 106px;
+								height: 20px;
+							}
+						}
+
+						.line3 {
+							left: 29.5%;
+							top: 69%;
+
+							img {
+								width: 273px;
+								height: 20px;
+							}
+						}
+
+						.img13 {
+							position: absolute;
+							left: 17%;
+							top: 38%;
+							z-index: 2;
+
+							display: block;
+
+						}
+
+						.img7 {
+							position: absolute;
+							left: 10%;
+							top: 34%;
+							z-index: 1;
+
+							display: block;
+						}
+
+						.img8 {
+							left: 18%;
+							top: 52%;
+						}
+
+						.img9 {
+							left: 18%;
+							top: 61%;
+						}
+
+						.img10 {
+							left: 18%;
+							top: 69%;
+						}
+
+						.img11 {
+							left: 29%;
+							top: 46%;
+						}
+
+						.img12 {
+							left: 29%;
+							top: 49%;
+						}*/
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 img {
+  position: absolute;
+  z-index: 1;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .img1 {
+  left: 25%;
+  top: 3%;
+  width: 50%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .img2 {
+  left: 10%;
+  top: 14%;
+  width: 80%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .line {
+  position: absolute;
+  z-index: 5;
+  overflow: hidden;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .line img {
+  position: relative;
+  display: block;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .line1 {
+  left: 29.5%;
+  top: 52%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .line1 img {
+  width: 31px;
+  height: 20px;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .line2 {
+  left: 29.5%;
+  top: 58%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .line2 img {
+  width: 106px;
+  height: 20px;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .line3 {
+  left: 29.5%;
+  top: 64%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .line3 img {
+  width: 273px;
+  height: 20px;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .img13 {
+  position: absolute;
+  left: 17%;
+  top: 38%;
+  z-index: 2;
+  display: block;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .img7 {
+  position: absolute;
+  left: 10%;
+  top: 34%;
+  z-index: 1;
+  display: block;
+  width: 80%;
+  height: 58%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .img8 {
+  left: 18%;
+  top: 52%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .img9 {
+  left: 18%;
+  top: 58%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .img10 {
+  left: 18%;
+  top: 64%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .img11 {
+  left: 29%;
+  top: 46%;
+  width: 53%;
+}
+#container .wp .page3 .swiper-container .swiper-wrapper .swiper-slide_6 .img12 {
+  left: 29%;
+  top: 49%;
+  width: 53%;
+}
+#container .wp .page3 .swiper-btn {
+  position: absolute;
+  top: 47%;
+  z-index: 42;
+}
+#container .wp .page3 .prev-btn {
+  left: 1%;
+}
+#container .wp .page3 .next-btn {
+  right: 1%;
+}
+#container .wp .page4 img {
+  position: absolute;
+  z-index: 1;
+}
+#container .wp .page4 .img1 {
+  left: 25%;
+  top: 3%;
+  width: 50%;
+}
+#container .wp .page4 .img2,
+#container .wp .page4 .img3,
+#container .wp .page4 .img4,
+#container .wp .page4 .img5 {
+  left: 9%;
+  top: 12%;
+  width: 82%;
+}
+#container .wp .page4 .img3,
+#container .wp .page4 .img4,
+#container .wp .page4 .img5 {
+  display: none;
+}
+#container .wp .page5 .img1 {
+  position: absolute;
+  left: 25%;
+  top: 2%;
+  z-index: 1;
+  width: 50%;
+}
+#container .wp .page5 .form {
+  position: absolute;
+  left: 10%;
+  top: 9%;
+  z-index: 1;
+  width: 80%;
+  height: 71%;
+  padding: 10px 0;
+  background: url("https://pop.letsun.com.cn/letsunImage/phone/10/10_2.png");
+  background-size: 100% 100%;
+  box-sizing: border-box;
+}
+#container .wp .page5 .form .form-item {
+  padding: 0 30px;
+  margin-top: 3%;
+}
+#container .wp .page5 .form .form-item:first-child {
+  margin-top: 0;
+}
+#container .wp .page5 .form .form-item .form-key {
+  font-size: 28px;
+  color: #1a2d6f;
+  font-weight: bold;
+}
+#container .wp .page5 .form .form-item .form-val {
+  width: 100%;
+  margin-top: 1%;
+}
+#container .wp .page5 .form .form-item .form-val .form-input {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  line-height: 50px;
+  color: #1a2d6f;
+  font-size: 26px;
+  border: 1px solid #1a2d6f;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+#container .wp .page5 .form .form-item .form-val .form-textarea {
+  width: 100%;
+  height: 96px;
+  padding: 0 20px;
+  line-height: 40px;
+  color: #1a2d6f;
+  font-size: 26px;
+  border: 1px solid #1a2d6f;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+#container .wp .page5 .form .form-btn-item {
+  margin-top: 4%;
+  cursor: pointer;
+}
+#container .wp .page5 .form .form-btn-item .form-btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  background: #1a2d6f;
+  border-radius: 7px;
+}
+#container .wp .page5 .form .form-btn-item .active {
+  background: #5182c0;
+}
+#container .wp .page5 .img2 {
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  z-index: 1;
+  width: 80%;
+}
+#container .backTop {
+  position: absolute;
+  bottom: 100px;
+  right: 20px;
+  z-index: 9999;
+  display: none;
+  width: 13%;
+  cursor: pointer;
+  -webkit-animation: shanShuo 0.9s linear infinite alternate;
+  animation: shanShuo 0.9s linear infinite alternate;
+}
+#container .tab {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  display: flex;
+  width: 100%;
+  background: #1a2d6f;
+}
+#container .tab .tab-item {
+  flex: 1;
+  padding: 15px 0;
+}
+#container .tab .tab-item img {
+  display: block;
+  width: 170px;
+  margin: 0 auto;
+}
+#container .wechat-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+}
+#container .wechat-mask .wechat-img {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  width: 70%;
+}
+#cnzz_stat_icon_1261139545 {
+  display: none;
+}

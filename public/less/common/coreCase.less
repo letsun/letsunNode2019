@@ -1,0 +1,79 @@
+@import "reset";
+
+.core-case {
+    width: 100%;
+    height: 400px;
+
+    background: url("/images/10/3_15.png") no-repeat;
+    background-size: 100% 100%;
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../images/10/3_15.png', sizingMethod='scale');
+
+    .content {
+        width: 1200px;
+        min-width: 1200px;
+        margin: 0 auto;
+
+        .case-tit {
+            width: 474px;
+            margin: 0 auto;
+            padding-top: 50px;
+            display: block;
+        }
+
+        .case-list {
+            margin-top: 30px;
+
+            .clearFix();
+
+            .case-item {
+	            position: relative;
+
+                float: left;
+                width: 380px;
+                height: 210px;
+                margin-right: 30px;
+                display: block;
+
+                transition: 0.6s ease;
+                -webkit-transition: 0.6s ease;
+                -moz-transition: 0.6s ease;
+                -ms-transition: 0.6s ease;
+                -o-transition: 0.6s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                    -webkit-transform: scale(1.05);
+                    -moz-transform: scale(1.05);
+                    -ms-transform: scale(1.05);
+                    -o-transform: scale(1.05);
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+
+                .case-title {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    z-index: 1;
+
+                    width: 100%;
+                    height: 36px;
+
+                    line-height: 36px;
+                    font-size: 16px;
+                    color: #fff;
+                    text-align: center;
+
+                    background: rgba(0,0,0,.7);
+	                filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000,endColorstr=#B2000000);
+                }
+
+            }
+        }
+    }
+}

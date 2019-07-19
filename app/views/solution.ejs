@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>解决产品赋码、生产溯源、营销创新需求_立信创源二维码营销/管理方案专家</title>
+    <% include common/title.ejs %>
+
+
+    <link rel="stylesheet" href="/plugs/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+    <link href="/css/solution.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+    <!-- 头部 -->
+    <% include common/header.ejs %>
+
+    <!-- 主体 -->
+    <div class="content">
+        <div class="banner">
+            <img class="banner-img" src="<%= planSolution.bgImg %>" />
+
+            <div class="banner-con">
+                <p class="tit"><%= planSolution.title %></p>
+                <p class="desc"><%= planSolution.desc %></p>
+            </div>
+        </div>
+
+        <div class="solution-icon">
+            <div class="icon-box">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <% if(planSolution.solutionList.length > 0) { %>
+                            <% for(var i = 0;i < planSolution.solutionList.length;i++) { %>
+                                <% if(planSolution.id == planSolution.solutionList[i].id) { %>
+                                <div class="swiper-slide icon-active">
+                                    <a href="/solution-<%= planSolution.solutionList[i].id %>.html">
+                                        <img class="icon icon1" src="<%= planSolution.solutionList[i].icon1 %>" />
+                                        <img class="icon icon2" src="<%= planSolution.solutionList[i].icon2 %>" />
+                                        <p class="icon-txt"><%= planSolution.solutionList[i].name %></p>
+                                    </a>
+                                </div>
+                                <% } else { %>
+                                <div class="swiper-slide">
+                                    <a href="/solution-<%= planSolution.solutionList[i].id %>.html">
+                                        <img class="icon icon1" src="<%= planSolution.solutionList[i].icon1 %>" />
+                                        <img class="icon icon2" src="<%= planSolution.solutionList[i].icon2 %>" />
+                                        <p class="icon-txt"><%= planSolution.solutionList[i].name %></p>
+                                    </a>
+                                </div>
+                                <% } %>
+                            <% } %>
+                        <% } %>
+                    </div>
+                </div>
+
+                <% if(planSolution.solutionList.length > 7) { %>
+                <div class="prev">
+                    <img src="/images/7/5_22.png" />
+                </div>
+
+                <div class="next">
+                    <img src="/images/7/5_21.png" />
+                </div>
+                <% } %>
+            </div>
+
+        </div>
+
+        <div class="solution-requirement">
+            <div class="req-tit">
+                <img class="req-icon" src="/images/7/5_15.png" />
+                <span>行业政策要求</span>
+            </div>
+
+            <div class="req-desc">
+                <%- planSolution.policyReq %>
+            </div>
+        </div>
+
+        <div class="solution-need">
+            <div class="need-con">
+                <img class="con-left" src="/images/7/5_17.png" />
+
+                <div class="con-right">
+                    <div class="right-tit">
+                        <img class="req-icon" src="/images/7/5_16.png" />
+                        <span>行业需求</span>
+                    </div>
+
+                    <ul class="right-info">
+                        <% for(var i = 0;i < planSolution.industryNeed.length;i++) { %>
+                        <li><%= planSolution.industryNeed[i] %></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="solution-us">
+            <div class="us-tit">
+                <img class="req-icon" src="/images/7/5_18.png" />
+                <span>立信创源解决方案</span>
+            </div>
+
+            <div class="us-desc">
+                <%- planSolution.planUs %>
+            </div>
+        </div>
+
+        <!-- 相关案例 -->
+        <% if (pageCaseList.length > 0) { %>
+        <div class="core-case">
+            <div class="content">
+                <img class="case-tit" src="/images/10/3_16.png" />
+                <div class="case-list">
+                    <% for (var i = 0; i < pageCaseList.length; i++) { %>
+                    <% if (i < 2) { %>
+                    <a class="case-item" href="/caseDetail-<%= pageCaseList[i].id %>.html">
+                        <img src="<%= pageCaseList[i].imgUrl %>" />
+                        <div class="case-title"><%= pageCaseList[i].title %></div>
+                    </a>
+                    <% } else { %>
+                    <a class="case-item" href="/caseDetail-<%= pageCaseList[i].id %>.html" style="margin-right: 0;">
+                        <img src="<%= pageCaseList[i].imgUrl %>" />
+                        <div class="case-title"><%= pageCaseList[i].title %></div>
+                    </a>
+                    <% } %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+
+    <!-- 合作意向表 -->
+    <% include common/coopIntention.ejs %>
+
+    <!-- 侧边栏 -->
+    <% include common/rightBar.ejs %>
+
+    <!--底部-->
+    <% include common/footer.ejs %>
+</div>
+
+<script src="/js/lib/jquery.min.js" type="text/javascript"></script>
+<script src="/js/lib/swiper.js" type="text/javascript"></script>
+<script src="/js/lib/backTop.js" type="text/javascript"></script>
+<script src="/js/lib/common.js" type="text/javascript"></script>
+<script src="/js/lib/rightBar.js" type="text/javascript"></script>
+<script src="/js/solution.js" type="text/javascript"></script>
+<script type="text/javascript">
+    main.init();
+</script>
+
+</body>
+<% include common/baidu.ejs %>
+
+</html>

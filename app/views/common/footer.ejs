@@ -1,0 +1,136 @@
+<div class="footer">
+    <div class="footerCon">
+        <div class="con-left">
+            <a href="/"><img class="left-logo" src="/images/1/1_1.png" alt="立信创源" /></a>
+
+            <div class="left-desc">
+                <p>深圳市立信创源科技有限公司</p>
+                <p>地址：深圳市宝安区F518时尚创意园F6栋3楼</p>
+                <p class="phone-number">全国统一服务热线：13310858165&nbsp;&nbsp;&nbsp;&nbsp;13310856113</p>
+                <p>E-mail : letsun@letsun.com.cn</p>
+            </div>
+
+            <a class="apply-use" href="javascript:;">申请试用</a>
+        </div>
+
+        <div class="con-right">
+            <ul class="right-list">
+                <li>
+                    <a href="/">首页</a>
+                </li>
+
+                <li>
+                    <a href="/traceBack.html">追溯系统</a>
+
+                    <ul class="right-second">
+                        <li>
+                            <a href="/traceBack.html">二维码追溯系统</a>
+                        </li>
+
+                        <li>
+                            <a href="/traceBackProduce.html">生产追溯系统</a>
+                        </li>
+
+                        <li>
+                            <a href="/traceBackChannel.html">渠道流通管理</a>
+                        </li>
+
+                        <li>
+                            <a href="/traceBackPickUp.html">防窜货系统</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/smartMarketing.html">智慧营销</a>
+                </li>
+
+                <li>
+                    <a href="/allCase-1.html">客户案例</a>
+
+                    <ul class="right-second">
+                        <li>
+                            <a href="/traceCase-1.html">追溯系统案例</a>
+                        </li>
+
+                        <li>
+                            <a href="/wisdomCase-1.html">智慧营销案例</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/solution-<%= navCon.jiejfaList[0].id %>.html">解决方案</a>
+
+                    <ul class="right-second">
+                        <% for(var i = 0;i < navCon.jiejfaList.length;i++) { %>
+                        <li><a href="/solution-<%= navCon.jiejfaList[i].id %>.html"><%= navCon.jiejfaList[i].name %></a></li>
+                        <% } %>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/dynamic-1.html">新闻资讯</a>
+
+                    <ul class="right-second">
+                        <li>
+                            <a href="/companyNews-1.html">公司新闻</a>
+                        </li>
+
+                        <li>
+                            <a href="/dynamic-1.html">行业动态</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/aboutUs.html">关于我们</a>
+
+                    <ul class="right-second">
+                        <li>
+                            <a href="/aboutUs.html">关于立信</a>
+                        </li>
+
+                        <li>
+                            <a href="/merchants.html">城市合伙人</a>
+                        </li>
+
+                        <li>
+                            <a href="/customer.html">客户服务</a>
+                        </li>
+
+                        <li>
+                            <a href="/contactUs.html">联系我们</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footerMark">
+        <div class="markCon">
+            <h4>
+                <span>友情链接 :</span>
+                <% for(var i = 0;i < commonData.companyPartner.length;i++){ %>
+                <a href="<%= commonData.companyPartner[i].url %>" target="_blank"><%= commonData.companyPartner[i].companyName %></a>
+                <% } %>
+            </h4>
+        </div>
+
+        <div class="icp-bottom">
+            Copyright  2019 深圳市立信创源科技有限公司 版权所有 |
+            <a class="icp" href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备13083109号<span class="statistics"></span></a>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="/js/lib/jquery.min.js" type="text/javascript"></script>
+<script>
+    $(".apply-use").on("click",function(e) {
+        $(".coop-intention").show();
+        e.stopPropagation();
+    });
+</script>

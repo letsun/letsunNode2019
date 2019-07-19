@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<!-- title -->
+	<title>新闻资讯_立信创源二维码营销/管理方案专家</title>
+	<% include common/title.ejs %>
+
+
+	<link rel="stylesheet" href="/plugs/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="/css/news.css">
+</head>
+<body>
+	<div id="container">
+
+		<!-- 头部 -->
+		<% include common/header.ejs %>
+
+		<!-- 主体 -->
+		<div class="content">
+
+			<div class="top">
+				<img class="top-bg" src="/images/5/6_1.png">
+				<div class="search-wra">
+					<div class="form-key">
+						<img class="search-img" src="/images/5/6_2.png" alt="">
+						<input type="text" class="form-input" id="searchVal" placeholder="输入您想了解的关键词">
+					</div>
+					<div class="form-btn" id="form-btn">搜索</div>
+				</div>
+			</div>
+
+			<div class="mainCon">
+
+				<!-- 顶部导航 -->
+				<div class="navBar">
+					<a class="nav-item <% if(type == "companyNews"){ %> active <% } %>" href="/companyNews-1.html">
+						<div class="nav-dec">
+							<div class="nav-img">
+								<img class="old-img" src="../images/2/1_77.png" alt="">
+								<img class="news-img" src="../images/2/1_78.png" alt="">
+							</div>
+							<div class="nav-text">公司新闻</div>
+						</div>
+					</a>
+					<a class="nav-item <% if(type == "dynamic"){ %> active <% } %>" href="/dynamic-1.html">
+						<div class="nav-dec">
+							<div class="nav-img">
+								<img class="old-img" src="../images/2/1_79.png" alt="">
+								<img class="news-img" src="../images/2/1_80.png" alt="">
+							</div>
+							<div class="nav-text">行业动态</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="newsBox">
+
+					<!-- 左侧新闻列表 -->
+					<div class="news">
+						<!-- 最新新闻 -->
+
+						<div class="tabCon newsCon">
+
+							<ul class="newest">
+								<li class="firItem">
+									<div class="newsImg">
+										<img src="<%= newsList.hotNews[0].thumbnail %>">
+									</div>
+
+									<div class="newsRight">
+										<span class="date"><%= newsList.hotNews[0].publishTime %></span>
+										<div class="title"><a href="/news-<%= type + '-' +newsList.hotNews[0].id + '.html' %>" class="newsName"><%= newsList.hotNews[0].title %></a></div>
+										<p><%= newsList.hotNews[0].desc %></p>
+										<div class="num">
+											<img src="/images/5/5_7.png">&nbsp;
+											<span><%= newsList.hotNews[0].browseNum %></span>&nbsp;&nbsp;
+											<a href="/news-<%= type + '-' + newsList.hotNews[0].id + '.html' %>"><img src="/images/5/5_13.png"></a>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<!-- 新闻列表 -->
+							<div style="padding-bottom: 80px; position: relative;">
+								<div id="newsCon" class="list">
+                                    <% for(var i = 0;i < newsList.newsList.length;i++){ %>
+									<div class="item">
+										<div class="newsImg">
+											<img src="<%= newsList.newsList[i].thumbnail %>">
+										</div>
+										<div class="newsRight">
+											<div class="title"><a href="/news-<%= type + '-' + newsList.newsList[i].id + '.html' %>"><%= newsList.newsList[i].title %></a></div>
+											<p class="text"><%= newsList.newsList[i].desc %></p>
+										</div>
+
+										<div class="newsView">
+											<div class="view">
+												<img src="/images/5/5_7.png">
+												<span><%= newsList.newsList[i].browseNum %></span>
+												<a href="/news-<%= type + '-' + newsList.newsList[i].id + '.html' %>"><img src="/images/5/5_13.png"></a>
+											</div>
+											<span class="date"><%= newsList.newsList[i].publishTime %></span>
+										</div>
+									</div>
+									<% } %>
+								</div>
+
+								<div class="paginator-container" id="paginator-container1">
+									<ul class="list">
+										<% for(var i = 0; i < paginator.length; i++){ %>
+											<% if (paginator[i].disabled) { %>
+												<% if (i == 0 || i == paginator.length - 1) { %>
+													<li class="li disabled other-item"><a href="javascript:void (0);"><%= paginator[i].text %></a></li>
+												<% } else { %>
+													<li class="li disabled"><a href="javascript:void (0);"><%= paginator[i].text %></a></li>
+												<% } %>
+
+											<% } else { %>
+												<% if (i == 0 || i == paginator.length - 1) { %>
+													<li class="li other-item"><a href="/<%= type + '-' + paginator[i].index + '.html' %>"><%= paginator[i].text %></a></li>
+												<% } else { %>
+													<li class="li"><a href="/<%= type + '-' + paginator[i].index + '.html' %>"><%= paginator[i].text %></a></li>
+												<% } %>
+											<% } %>
+										<% } %>
+									</ul>
+								</div>
+
+								<div class="paginator-container" id="paginator-container2">
+									<ul class="list"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- 右侧案例 -->
+					<% if (pageCaseList.length > 0) { %>
+						<div class="case-list">
+							<% for (var i = 0; i < pageCaseList.length; i++) { %>
+								<a class="case-item" href="/caseDetail-<%= pageCaseList[i].id %>.html">
+									<img src="<%= pageCaseList[i].imgUrl %>" alt="">
+								</a>
+							<% } %>
+						</div>
+					<% } %>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- 底部 -->
+		<% include common/footer.ejs %>
+
+		<!-- 侧边栏 -->
+		<% include common/rightBar.ejs %>
+
+		<!-- 合作意向表 -->
+		<% include common/coopIntention.ejs %>
+	</div>
+</body>
+<script src="/js/lib/jquery.min.js" type="text/javascript"></script>
+<script src="/js/lib/backTop.js" type="text/javascript"></script>
+<script src="/js/lib/common.js" type="text/javascript"></script>
+<script src="/js/lib/rightBar.js" type="text/javascript"></script>
+<script src="/js/mediaNews.js" type="text/javascript"></script>
+<script src="/js/news.js" type="text/javascript"></script>
+
+<script>
+	main.init();
+</script>
+
+<% include common/baidu.ejs %>
+</html>

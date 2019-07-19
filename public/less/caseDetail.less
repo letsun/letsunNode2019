@@ -1,0 +1,319 @@
+@import "common/reset";
+@import "common/header";
+@import "common/footer";
+@import "common/coreCase";
+@import "common/swiper";
+@import "common/rightBar";
+@import "common/coopIntention";
+@import "common/coreCase";
+
+body {
+    min-width: 1200px;
+}
+
+.header .navList {
+    li:nth-child(4){
+        a {
+            color: #3176eb;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        &:hover {
+            a {
+                color: #3176eb;
+                margin-top: -70px;
+            }
+        }
+    }
+}
+
+@width: 1200px;
+@blue: #3b7fea;
+
+.content {
+
+    .top-img {
+        display: block;
+
+        width: 100%;
+    }
+
+    .toggle-wra {
+        width: 100%;
+
+        background: #fff;
+
+        .toggle {
+            width: 1200px;
+            margin: 0 auto;
+
+            font-size: 16px;
+            line-height: 60px;
+
+            .clearFix();
+
+            .toggle-left {
+                float: left;
+
+                color: #333;
+
+                .clearFix();
+
+                .toggle-img {
+                    float: left;
+
+                    display: block;
+
+                    margin-top: 17px;
+                }
+
+                .span {
+                    float: left;
+
+                    margin-left: 8px;
+                }
+
+                .span1 {
+                    margin-left: 20px;
+                }
+
+                .span3 {
+                    color: @blue;
+                }
+
+                .fa {
+                    display: inline-block;
+
+                    margin-left: 8px;
+
+                    font-size: 20px;
+                    line-height: 60px;
+                }
+            }
+
+            .toggle-right {
+                float: right;
+
+                color: @blue;
+
+                cursor: pointer;
+
+                .clearFix();
+
+                img {
+                    float: left;
+
+                    margin-top: 18px;
+                }
+
+                .toggle-text {
+                    float: left;
+
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .models-wra {
+        width: 100%;
+
+        .item-model {
+            width: 100%;
+
+            margin: 0 auto;
+        }
+
+        .item-model_1 {
+            width: 100%;
+
+            .infor-wra {
+                position: relative;
+
+                margin: 0 auto;
+                padding: 40px 0 30px 0;
+
+                background: #eaeaea;
+
+                .infor {
+                    width: 1200px;
+                    margin: 0 auto 0 auto;
+
+                    box-shadow: 0 10px 20px 0 #d9d9d9;
+
+                    .clearFix();
+
+                    .infor-left {
+                        float: left;
+
+                        width: 838-32-40px;
+                        padding: 40px 40px 40px 32px;
+
+                        background: #fff;
+
+                        .infor-img {
+                            float: left;
+
+                            img {
+                                display: block;
+
+                                width: 384px;
+                                height: 213px;
+                            }
+                        }
+
+                        .infor-dec {
+                            float: left;
+
+                            width: 838-32-40-384-20px;
+
+                            margin-left: 20px;
+
+                            .infor-title {
+                                padding-top: 10px;
+
+                                font-size: 18px;
+                                line-height: 18px;
+                                color: #000;
+                                font-weight: bold;
+                            }
+
+                            .infor-line {
+                                margin-top: 20px;
+
+                                width: 23px;
+                                height: 0;
+
+                                border-top: 2px solid #cccccc;
+                                border-radius: 4px;
+                            }
+
+                            .infor-text {
+                                margin-top: 10px;
+
+                                font-size: 14px;
+                                line-height: 30px;
+                                color: #666;
+
+                                .ellipsis(5);
+                            }
+                        }
+                    }
+
+                    .infor-right {
+                        position: relative;
+
+                        float: left;
+
+                        width: 1200-838-96px;
+                        height: 293px;
+                        padding-left: 96px;
+
+                        background: #f5f5f5;
+
+                        .service-title {
+                            padding-top: 50px;
+
+                            .service-title-e {
+                                line-height: 18px;
+                                font-size: 18px;
+                                color: #999;
+                                font-weight: bold;
+                            }
+
+                            .service-title-c {
+                                margin-top: 10px;
+
+                                font-size: 18px;
+                                color: #000;
+                                line-height: 18px;
+                            }
+                        }
+
+                        .infor-line {
+                            margin-top: 20px;
+
+                            width: 23px;
+                            height: 0;
+
+                            border-top: 2px solid #cccccc;
+                            border-radius: 4px;
+                        }
+
+                        .service-text {
+                            width: 222px;
+                            margin-top: 14px;
+
+                            font-size: 14px;
+                            color: #666;
+                            line-height: 26px;
+
+                            .ellipsis(3);
+                        }
+
+                        .switch {
+                            position: absolute;
+                            right: 23px;
+                            bottom: 28px;
+                            z-index: 1;
+
+                            color: @blue;
+
+                            .fa {
+                                font-size: 32px;
+                            }
+
+                            .fa-angle-right {
+                                margin-left: 33px;
+                            }
+                        }
+
+                    }
+                }
+
+                .infor-detail {
+                    width: 1200-60px;
+                    margin: 15px auto 0 auto;
+                    padding: 40px 30px;
+
+                    background: #fff;
+
+                    img {
+                        display: block;
+
+                        max-width: 100%;
+                        margin: 0 auto;
+                    }
+                }
+
+                .infor-btn {
+                    width: 350px;
+                    margin: 30px auto 0 auto;
+
+                    .clearFix();
+
+                    .btn {
+                        float: left;
+
+                        width: 148px;
+                        height: 42px;
+
+                        color: @blue;
+                        font-size: 16px;
+                        line-height: 42px;
+                        text-align: center;
+                        font-weight: 600;
+
+                        border: 1px solid @blue;
+                    }
+
+                    .last-btn {
+                        float: right;
+                    }
+                }
+            }
+
+        }
+    }
+}

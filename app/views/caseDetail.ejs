@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="baidu-site-verification" content="HKoyPctL22" />
+
+    <title><%= commonData.title %></title>
+    <% include common/title.ejs %>
+
+    <link rel="stylesheet" href="/css/caseDetail.css" type="text/css">
+    <link rel="stylesheet" href="/plugs/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/plugs/fonts/iconfont.css" type="text/css">
+    <script src="/js/lib/respond.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="container">
+
+    <!-- 头部 -->
+    <% include common/header.ejs %>
+
+    <div class="content">
+        <!--顶部图片-->
+        <img class="top-img" src="/images/4/4_1.png" alt="">
+
+        <!--当前位置-->
+        <div class="toggle-wra">
+            <div class="toggle">
+                <div class="toggle-left">
+                    <img class="toggle-img" src="/images/4/4_2.png" alt="">
+                    <a class="span span1" href="/">首页<i class="fa fa-angle-right icon1" aria-hidden="true"></i></a>
+                    <a class="span span2" href="/allCase-1.html">案例<i class="fa fa-angle-right icon2" aria-hidden="true"></i></a>
+                    <a class="span span3" href="javascript:void(0);"><%= caseDetail.title %></a>
+                </div>
+
+                <div class="toggle-right">
+                    <img src="/images/4/4_3.png" alt="">
+                    <div class="toggle-text" id="toggle-text">填写您的业务需求</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="models-wra">
+
+            <!--客户案例-->
+            <div class="item-model item-model_1">
+
+                <div class="infor-wra">
+                    <div class="infor">
+                        <div class="infor-left">
+                            <div class="infor-img">
+                                <img src="<%= caseDetail.thumbnail %>" alt="">
+                            </div>
+                            <div class="infor-dec">
+                                <div class="infor-title"><%= caseDetail.title %></div>
+                                <div class="infor-line"></div>
+                                <div class="infor-text"><%= caseDetail.desc %></div>
+                            </div>
+                        </div>
+
+                        <div class="infor-right">
+                            <div class="service-title">
+                                <div class="service-title-e">SERVICE</div>
+                                <div class="service-title-c">服务内容</div>
+                            </div>
+                            <div class="infor-line"></div>
+
+                            <div class="service-text"><%= caseDetail.serviceDesc %></div>
+
+                            <div class="switch">
+                                <a class="fa fa-angle-left" href="/caseDetail-<%= caseDetail.prevInfo.id %>.html" aria-hidden="true"></a>
+                                <a class="fa fa-angle-right" href="/caseDetail-<%= caseDetail.nextInfo.id %>.html" aria-hidden="true"></a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="infor-detail"><%- caseDetail.content %></div>
+
+                    <div class="infor-btn">
+                        <!--提交需求按钮-->
+                        <a class="btn" href="/">返回首页</a>
+                        <a class="btn last-btn" href="/allCase-1.html">查看更多案例</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 相关案例 -->
+            <% if (caseDetail.correlationCase.length > 0) { %>
+                <div class="core-case">
+                    <div class="content">
+                        <img class="case-tit" src="/images/10/3_16.png" />
+                        <div class="case-list">
+                            <% for (var i = 0; i < caseDetail.correlationCase.length; i++) { %>
+                                <% if (i < 2) { %>
+                                    <a class="case-item" href="/caseDetail-<%= caseDetail.correlationCase[i].id %>.html">
+                                        <img src="<%= caseDetail.correlationCase[i].imgUrl %>" />
+                                        <div class="case-title"><%= caseDetail.correlationCase[i].title %></div>
+                                    </a>
+                                <% } else { %>
+                                    <a class="case-item" href="/caseDetail-<%= caseDetail.correlationCase[i].id %>.html" style="margin-right: 0;">
+                                        <img src="<%= caseDetail.correlationCase[i].imgUrl %>" />
+                                        <div class="case-title"><%= caseDetail.correlationCase[i].title %></div>
+                                    </a>
+                                <% } %>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+
+        </div>
+
+    </div>
+
+    <!--底部-->
+    <% include common/footer.ejs %>
+
+    <!-- 侧边栏 -->
+    <% include common/rightBar.ejs %>
+
+    <!-- 合作意向表 -->
+    <% include common/coopIntention.ejs %>
+</div>
+
+<script src="/js/lib/jquery.min.js" type="text/javascript"></script>
+<script src="/js/lib/swiper.js" type="text/javascript"></script>
+<script src="/js/lib/backTop.js" type="text/javascript"></script>
+<script src="/js/lib/common.js" type="text/javascript"></script>
+<script src="/js/lib/rightBar.js" type="text/javascript"></script>
+<script>
+    $(".toggle-right").on("click",function(e) {
+        $(".coop-intention").show();
+        e.stopPropagation();
+    });
+
+</script>
+</body>
+
+<% include common/baidu.ejs %>
+</html>

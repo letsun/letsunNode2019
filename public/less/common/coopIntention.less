@@ -1,0 +1,249 @@
+@import "reset";
+
+.coop-intention {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    width: 100%;
+    min-width: 1200px;
+    padding: 20px 0;
+    display: none;
+
+    background: #fff;
+
+    box-shadow: 0 10px 5px rgba(230,230,230,.3);
+    -webkit-box-shadow: 0 10px 5px rgba(230,230,230,.3);
+    -moz-box-shadow: 0 10px 5px rgba(230,230,230,.3);
+    -o-box-shadow: 0 10px 5px rgba(230,230,230,.3);
+
+    .intention-con {
+        position: relative;
+
+        width: 1200px;
+        margin: 0 auto;
+
+        .clearFix();
+
+        .intention-left {
+            float: left;
+            width: 440px;
+
+            .left-top {
+                padding-bottom: 30px;
+
+                border-bottom: 1px solid #eee;
+
+                .red-tit {
+                    color: #f00;
+                    font-size: 22px;
+                }
+
+                .tit {
+                    margin-top: 15px;
+
+                    line-height: 30px;
+                    color: #000;
+                    font-size: 26px;
+                }
+            }
+
+            .left-bottom {
+                margin-top: 30px;
+
+                .bottom-desc {
+                    line-height: 30px;
+                    color: #333;
+                    font-size: 14px;
+                }
+
+                .bottom-info {
+                    margin-top: 100px;
+
+                    .company-name {
+                        color: #000;
+                        font-size: 20px;
+                    }
+
+                    .company-desc {
+                        margin-top: 30px;
+
+                        p {
+                            line-height: 30px;
+                            color: #333;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .intention-right {
+            float: right;
+            width: 580px;
+            margin-right: 60px;
+
+            .right-tit {
+                color: #000;
+                font-size: 22px;
+            }
+
+            .right-form {
+                margin-top: 10px;
+
+                .company,
+                .email {
+                    width: 100%;
+                    height: 30px;
+                    margin-bottom: 10px;
+                    padding-left: 10px;
+                    display: block;
+
+                    line-height: 30px;
+                    color: #666;
+                    font-size: 14px;
+
+                    border: 1px solid #eee;
+
+                    background: #f5f5f5;
+
+                    -webkit-appearance: none;
+
+                    box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -o-box-sizing: border-box;
+                }
+
+                .form-row {
+                    .clearFix();
+
+                    .row-input {
+                        float: left;
+                        width: 280px;
+                        height: 30px;
+                        padding-left: 10px;
+                        display: block;
+
+                        line-height: 30px;
+                        color: #666;
+                        font-size: 14px;
+
+                        border: 1px solid #eee;
+
+                        background: #f5f5f5;
+
+                        -webkit-appearance: none;
+
+                        box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        -o-box-sizing: border-box;
+                    }
+
+                    .phone {
+                        margin-left: 20px;
+                    }
+                }
+
+                .multi-tit {
+                    margin-top: 15px;
+
+                    line-height: 30px;
+                    color:#000;
+                    font-size: 24px;
+                }
+
+                .multi-box {
+                    margin-top: 10px;
+
+                    .clearFix();
+
+                    .multi-item {
+                        float: left;
+                        width: 140px;
+                        padding: 30px 0;
+                        margin-right: 5px;
+                        margin-bottom: 10px;
+
+                        color: #333;
+                        font-size: 14px;
+                        text-align: center;
+
+                        background: #f5f5f5;
+
+                        cursor: pointer;
+                    }
+
+                    .multi-active {
+                        color: #fff;
+
+                        background: #3177eb;
+                    }
+                }
+
+                .budget-tit {
+                    margin-top: 10px;
+
+                    color: #000;
+                    font-size: 16px;
+                }
+
+                .budget-box {
+                    margin-top: 15px;
+
+                    .clearFix();
+
+                    .budget-radio {
+                        float: left;
+                        width: 115px;
+                        margin-right: 40px;
+
+                        color: #555;
+                        font-size: 14px;
+                    }
+
+                    .radio-last {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .right-btn {
+                width: 100%;
+                height: 50px;
+                margin-top: 30px;
+                display: block;
+
+                line-height: 50px;
+                color: #3177eb;
+                font-size: 16px;
+                text-align: center;
+                font-weight: 600;
+
+                border: 2px solid #3177eb;
+            }
+
+            ::-webkit-input-placeholder {
+                color: #666;
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            width: 39px;
+            height: 39px;
+            display: block;
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+    }
+}

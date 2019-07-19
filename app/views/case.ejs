@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+
+    <title><%= commonData.title %></title>
+    <% include common/title.ejs %>
+
+    <link rel="stylesheet" href="/css/case.css" type="text/css">
+    <link rel="stylesheet" href="/plugs/fonts/iconfont.css" type="text/css">
+    <script src="/js/lib/respond.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="container">
+
+    <!-- 头部 -->
+    <% include common/header.ejs %>
+
+    <div class="content">
+
+        <!--顶部图片-->
+        <img class="top-img" src="/images/4/4_1.png" alt="">
+
+        <!--tab切换-->
+        <div class="nav">
+            <a class="nav-item <% if(type == "allCase"){ %> active <% } %>" href="/allCase-1.html">全部案例</a>
+            <a class="nav-item <% if(type == "wisdomCase"){ %> active <% } %>" href="/wisdomCase-1.html">智慧营销</a>
+            <a class="nav-item <% if(type == "traceCase"){ %> active <% } %>" href="/traceCase-1.html">追踪溯源</a>
+            <a class="nav-item last-nav-item" id="coop-btn" href="javascript:void(0);">
+                <img src="/images/4/4_3.png" alt="">
+                <div class="nav-text">填写您的业务需求</div>
+            </a>
+        </div>
+
+        <div class="models-wra">
+
+            <div class="item-model item-model_1">
+
+                <div class="model-con">
+                    <!--列表-->
+                    <% if (caseList.length > 0) { %>
+                        <div class="list">
+                            <% for (var i = 0; i < caseList.length; i++) { %>
+                                <% if (i % 4 == 0) { %>
+                                    <a class="item first-item" href="/caseDetail-<%= caseList[i].id %>.html">
+                                        <div class="img-wra">
+                                            <img class="item-img" src="<%= caseList[i].thumbnail %>" alt="">
+                                            <div class="layer"></div>
+                                        </div>
+                                        <div class="item-title"><%= caseList[i].title %></div>
+                                        <div class="item-type">
+                                            <div class="item-type-key">服务内容</div>
+                                            <div class="item-type-val"><%= caseList[i].serviceDesc %></div>
+                                        </div>
+                                    </a>
+                                <% } else { %>
+                                    <a class="item" href="/caseDetail-<%= caseList[i].id %>.html">
+                                        <div class="img-wra">
+                                            <img class="item-img" src="<%= caseList[i].thumbnail %>" alt="">
+                                            <div class="layer"></div>
+                                        </div>
+                                        <div class="item-title"><%= caseList[i].title %></div>
+                                        <div class="item-type">
+                                            <div class="item-type-key">服务内容</div>
+                                            <div class="item-type-val"><%= caseList[i].serviceDesc %></div>
+                                        </div>
+                                    </a>
+                                <% } %>
+                            <% } %>
+                        </div>
+                    <% } %>
+
+                </div>
+            </div>
+
+            <div class="paginator-container">
+                <ul class="list">
+                    <% for (var i = 0; i < paginator.length; i++){ %>
+                        <% if (paginator[i].disabled) { %>
+                            <% if (i == 0 || i == paginator.length - 1) { %>
+                                <li class="li disabled other-item"><a href="javascript:void (0);"><%= paginator[i].text %></a></li>
+                            <% } else { %>
+                                <li class="li disabled"><a href="javascript:void (0);"><%= paginator[i].text %></a></li>
+                            <% } %>
+
+                        <% } else { %>
+                            <% if (i == 0 || i == paginator.length - 1) { %>
+                                <li class="li other-item"><a href="/<%= type + '-' + paginator[i].index + '.html' %>"><%= paginator[i].text %></a></li>
+                            <% } else { %>
+                                <li class="li"><a href="/<%= type + '-' + paginator[i].index + '.html' %>"><%= paginator[i].text %></a></li>
+                            <% } %>
+                        <% } %>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 合作意向表 -->
+    <% include common/coopIntention.ejs %>
+
+    <!--底部-->
+    <% include common/footer.ejs %>
+
+    <!-- 侧边栏 -->
+    <% include common/rightBar.ejs %>
+
+</div>
+
+<script src="/js/lib/jquery.min.js" type="text/javascript"></script>
+<script src="/js/lib/backTop.js" type="text/javascript"></script>
+<script src="/js/lib/common.js" type="text/javascript"></script>
+<script src="/js/lib/rightBar.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    window.onload = function() {
+        $(".last-nav-item").on("click",function(e) {
+            $(".coop-intention").show();
+            e.stopPropagation();
+        });
+    };
+</script>
+</body>
+
+<% include common/baidu.ejs %>
+</html>

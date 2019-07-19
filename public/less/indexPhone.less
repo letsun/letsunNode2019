@@ -1,0 +1,881 @@
+@import "common/newAnimate";
+@import "common/common";
+
+@red :'#222222';
+
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+#container {
+	position: relative;
+
+	width: 100%;
+	height: 100%;
+
+	background: #fff;
+
+	.header {
+		position: relative;
+		z-index: 99;
+
+		width: 100%;
+		padding: 14px 0;
+
+		background: #1a2d6f;
+
+		.clearFix();
+
+		.logo {
+			float: left;
+
+			margin-left: 30px;
+		}
+
+		.cate {
+			float: right;
+
+			margin-right: 30px;
+			margin-top: 11px;
+		}
+
+		.cate-list {
+			position: absolute;
+			right: 0;
+			top: 80px;
+			z-index: 10;
+
+			display: none;
+
+			padding: 0 30px;
+
+			background: url('https://pop.letsun.com.cn/letsunImage/phone/1/1_15.png') no-repeat;
+			background-size: 100% 100%;
+
+			.cate-item {
+				width: 150px;
+				height: 66px;
+
+				line-height: 66px;
+				font-size: 30px;
+				color: #676664;
+				text-align: center;
+
+				border-bottom: 1px solid #1a2d6f;
+
+				cursor: pointer;
+
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+
+			.active {
+				color: #1a2d6f;
+			}
+		}
+	}
+
+	.wp {
+		background: url('https://pop.letsun.com.cn/letsunImage/phone/bg.png') no-repeat;
+		background-size: 100% 100%;
+
+		.page1 {
+			position: relative;
+
+			.swiper-container {
+				width: 100%;
+				height: 100%;
+
+				.swiper-slide {
+					height: 100%;
+
+					img {
+						display: block;
+
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				.swiper-pagination {
+
+					.swiper-pagination-bullet {
+						width: 17px;
+						height: 17px;
+						display: inline-block;
+						border-radius: 100%;
+						opacity: 1;
+
+						border: 1px solid #fff;
+
+						background: none;
+					}
+
+					.swiper-pagination-bullet-active {
+						background: #fff;
+					}
+				}
+			}
+
+			.arrow {
+				position: absolute;
+				left: 45%;
+				bottom: 60px;
+				z-index: 10;
+
+				width: 10%;
+
+				-webkit-animation: start 1.5s infinite ease-in-out;
+				animation: start 1.5s infinite ease-in-out;
+			}
+		}
+
+		.page2 {
+
+			.ani {
+				display: none;
+			}
+
+			img {
+				position: absolute;
+				z-index: 1;
+			}
+
+			.img1 {
+				left: 25%;
+				top: 4%;
+
+				width: 50%;
+			}
+
+			.img2 {
+				top: 14%;
+			}
+
+			.img3 {
+				top: 13%;
+
+				width: 86%;
+			}
+
+			.img5 {
+				top: 35%;
+
+				width: 86%;
+			}
+
+			.img4 {
+				top: 36%;
+			}
+
+			.img6 {
+				top: 57%;
+			}
+
+
+			.img7 {
+				top: 56%;
+
+				width: 86%;
+			}
+
+			.img8 {
+				top: 79%;
+
+				width: 86%;
+			}
+
+			.img9 {
+				top: 78%;
+
+				width: 86%;
+			}
+
+			.img2,
+			.img4,
+			.img6,
+			.img8 {
+				width: 22%;
+
+				z-index: 2;
+			}
+
+			.img3,
+			.img5,
+			.img7,
+			.img9 {
+				left: 7%;
+			}
+
+			.img2,
+			.img6 {
+				left: 7%;
+			}
+
+			.img4,
+			.img8 {
+				right: 7%;
+			}
+
+		}
+
+		.page3 {
+
+			.swiper-container {
+				width: 100%;
+				height: 100%;
+
+				.swiper-wrapper {
+					height: 100%;
+
+					.swiper-slide {
+						position: relative;
+
+						height: 100%;
+					}
+
+					.swiper-slide_1 {
+
+						img {
+							position: absolute;
+							z-index: 1;
+						}
+
+						.img1 {
+							left: 25%;
+							top: 3%;
+
+							width: 50%;
+						}
+
+						.img2 {
+							left: 10%;
+							top: 10%;
+
+							width: 80%;
+						}
+
+						.img3 {
+							left: 10%;
+							top: 37%;
+
+							width: 80%;
+						}
+
+						.img4 {
+							left: 21%;
+							top: 73%;
+							z-index: 2;
+
+							width: 17%;
+						}
+
+						.img5 {
+							right: 21%;
+							top: 73%;
+							z-index: 2;
+
+							width: 17%;
+						}
+
+						.img6 {
+							left: 21%;
+							top: 73%;
+							z-index: 2;
+
+							width: 17%;
+
+							-webkit-animation: rotateInfinite 2s linear forwards infinite;
+						}
+
+
+						.img7 {
+							right: 21%;
+							top: 73%;
+							z-index: 2;
+
+							width: 17%;
+
+							-webkit-animation: rotateInfinite 2s linear forwards infinite;
+						}
+
+						.img8 {
+							right: 21%;
+							top: 73%;
+							z-index: 2;
+
+							width: 17%;
+						}
+
+						.img9 {
+							left: 21%;
+							top: 73%;
+							z-index: 2;
+
+							width: 17%;
+						}
+
+						.img10 {
+							left: 10%;
+							top: 70%;
+
+							width: 80%;
+						}
+					}
+
+					.swiper-slide_2 {
+
+						img {
+							position: absolute;
+							z-index: 2;
+						}
+
+						.img1 {
+							left: 25%;
+							top: 3%;
+
+							width: 50%;
+						}
+
+						.img2 {
+							left: 10%;
+							top: 12%;
+
+							width: 80%;
+						}
+
+						.img3,
+						.img4,
+						.img5,
+						.img6,
+						.img7,
+						.img8 {
+							left: 10%;
+							top: 43%;
+							width: 80%;
+						}
+
+						.img8 {
+							z-index: 1;
+						}
+
+					}
+
+					.swiper-slide_3 {
+
+						img {
+							position: absolute;
+							z-index: 1;
+						}
+
+						.img1 {
+							left: 25%;
+							top: 3%;
+
+							width: 50%;
+						}
+
+						.img2 {
+							left: 10%;
+							top: 10%;
+
+							width: 80%;
+						}
+
+						.img3 {
+							left: 10%;
+							top: 48%;
+
+							width: 80%;
+						}
+
+						.img4 {
+							left: 10%;
+							top: 60%;
+
+							width: 80%;
+						}
+					}
+
+					.swiper-slide_4 {
+
+						img {
+							position: absolute;
+							z-index: 1;
+						}
+
+						.img1 {
+							left: 25%;
+							top: 3%;
+
+							width: 50%;
+						}
+
+						.img2 {
+							left: 10%;
+							top: 10%;
+
+							width: 80%;
+						}
+
+						.img3 {
+							left: 10%;
+							top: 48%;
+
+							width: 80%;
+						}
+					}
+
+					.swiper-slide_5 {
+
+						img {
+							position: absolute;
+							z-index: 1;
+						}
+
+						.img1 {
+							left: 25%;
+							top: 2%;
+
+							width: 50%;
+						}
+
+						.img2 {
+							left: 10%;
+							top: 12%;
+
+							width: 80%;
+						}
+
+						.img3,
+						.img4 {
+							left: 10%;
+							top: 25%;
+
+							width: 80%;
+						}
+					}
+
+					.swiper-slide_6 {
+
+						img {
+							position: absolute;
+							z-index: 1;
+						}
+
+						.img1 {
+							left: 25%;
+							top: 3%;
+
+							width: 50%;
+						}
+
+						.img2 {
+							left: 10%;
+							top: 14%;
+
+							width: 80%;
+						}
+
+						.line {
+							position: absolute;
+							z-index: 5;
+
+							overflow: hidden;
+
+							img {
+								position: relative;
+
+								display: block;
+							}
+						}
+
+						/*.line1 {
+							left: 29.5%;
+							top: 52%;
+
+							img {
+								width: 31px;
+								height: 20px;
+							}
+						}
+
+						.line2 {
+							left: 29.5%;
+							top: 61%;
+
+							img {
+								width: 106px;
+								height: 20px;
+							}
+						}
+
+						.line3 {
+							left: 29.5%;
+							top: 69%;
+
+							img {
+								width: 273px;
+								height: 20px;
+							}
+						}
+
+						.img13 {
+							position: absolute;
+							left: 17%;
+							top: 38%;
+							z-index: 2;
+
+							display: block;
+
+						}
+
+						.img7 {
+							position: absolute;
+							left: 10%;
+							top: 34%;
+							z-index: 1;
+
+							display: block;
+						}
+
+						.img8 {
+							left: 18%;
+							top: 52%;
+						}
+
+						.img9 {
+							left: 18%;
+							top: 61%;
+						}
+
+						.img10 {
+							left: 18%;
+							top: 69%;
+						}
+
+						.img11 {
+							left: 29%;
+							top: 46%;
+						}
+
+						.img12 {
+							left: 29%;
+							top: 49%;
+						}*/
+
+
+						.line1 {
+							left: 29.5%;
+							top: 52%;
+
+							img {
+								width: 31px;
+								height: 20px;
+							}
+						}
+
+						.line2 {
+							left: 29.5%;
+							top: 58%;
+
+							img {
+								width: 106px;
+								height: 20px;
+							}
+						}
+
+						.line3 {
+							left: 29.5%;
+							top: 64%;
+
+							img {
+								width: 273px;
+								height: 20px;
+							}
+						}
+
+						.img13 {
+							position: absolute;
+							left: 17%;
+							top: 38%;
+							z-index: 2;
+
+							display: block;
+
+						}
+
+						.img7 {
+							position: absolute;
+							left: 10%;
+							top: 34%;
+							z-index: 1;
+
+							display: block;
+
+							width: 80%;
+							height: 58%;
+						}
+
+						.img8 {
+							left: 18%;
+							top: 52%;
+						}
+
+						.img9 {
+							left: 18%;
+							top: 58%;
+						}
+
+						.img10 {
+							left: 18%;
+							top: 64%;
+						}
+
+						.img11 {
+							left: 29%;
+							top: 46%;
+
+							width: 53%;
+						}
+
+						.img12 {
+							left: 29%;
+							top: 49%;
+
+							width: 53%;
+						}
+					}
+				}
+			}
+
+			.swiper-btn {
+				position: absolute;
+				top: 47%;
+				z-index: 42;
+			}
+
+			.prev-btn {
+				left: 1%;
+			}
+
+			.next-btn {
+				right: 1%;
+			}
+		}
+
+		.page4 {
+
+			img {
+				position: absolute;
+				z-index: 1;
+			}
+
+			.img1 {
+				left: 25%;
+				top: 3%;
+
+				width: 50%;
+			}
+
+			.img2,
+			.img3,
+			.img4,
+			.img5 {
+				left: 9%;
+				top: 12%;
+
+				width: 82%;
+			}
+
+			.img3,
+			.img4,
+			.img5 {
+				display: none;
+			}
+		}
+
+		.page5 {
+
+			.img1 {
+				position: absolute;
+				left: 25%;
+				top: 2%;
+				z-index: 1;
+
+				width: 50%;
+			}
+
+			.form {
+				position: absolute;
+				left: 10%;
+				top: 9%;
+				z-index: 1;
+
+				width: 80%;
+				height: 71%;
+				padding: 10px 0;
+
+				background: url("https://pop.letsun.com.cn/letsunImage/phone/10/10_2.png");
+				background-size: 100% 100%;
+
+				box-sizing: border-box;
+
+				.form-item {
+					padding: 0 30px;
+					margin-top: 3%;
+
+					&:first-child {
+						margin-top: 0;
+					}
+
+					.form-key {
+						font-size: 28px;
+						color: #1a2d6f;
+						font-weight: bold;
+					}
+
+					.form-val {
+						width: 100%;
+						margin-top: 1%;
+
+						.form-input {
+							width: 100%;
+							height: 50px;
+							padding: 0 20px;
+
+							line-height: 50px;
+							color: #1a2d6f;
+							font-size: 26px;
+
+							border: 1px solid #1a2d6f;
+							border-radius: 7px;
+
+							box-sizing: border-box;
+						}
+
+						.form-textarea {
+							width: 100%;
+							height: 96px;
+							padding: 0 20px;
+
+							line-height: 40px;
+							color: #1a2d6f;
+							font-size: 26px;
+
+							border: 1px solid #1a2d6f;
+							border-radius: 7px;
+
+							box-sizing: border-box;
+						}
+					}
+				}
+
+				.form-btn-item {
+					margin-top: 4%;
+
+					cursor: pointer;
+
+					.form-btn {
+						display: block;
+
+						width: 100%;
+						height: 50px;
+
+						line-height: 50px;
+						font-size: 28px;
+						text-align: center;
+						color: #fff;
+
+						background: #1a2d6f;
+
+						border-radius: 7px;
+					}
+
+					.active {
+						background: #5182c0;
+					}
+				}
+			}
+
+			.img2 {
+				position: absolute;
+				left: 10%;
+				bottom: 0;
+				z-index: 1;
+
+				width: 80%;
+			}
+		}
+	}
+
+	.backTop {
+		position: absolute;
+		bottom: 100px;
+		right: 20px;
+		z-index: 9999;
+
+		display: none;
+
+		width: 13%;
+
+		cursor: pointer;
+
+		-webkit-animation: shanShuo 0.9s linear infinite alternate;
+		animation: shanShuo 0.9s linear infinite alternate;
+	}
+
+	.tab {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 99;
+
+		display: flex;
+
+		width: 100%;
+
+		background: #1a2d6f;
+
+		.tab-item {
+			flex: 1;
+
+			padding: 15px 0;
+
+			img {
+				display: block;
+
+				width: 170px;
+
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.wechat-mask {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+		display: none;
+
+		background: rgba(0,0,0,.8);
+
+		.wechat-img {
+			position: absolute;
+			top: 30%;
+			left: 15%;
+
+			width: 70%;
+		}
+	}
+}
+
+#cnzz_stat_icon_1261139545 {
+	display: none;
+}

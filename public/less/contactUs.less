@@ -1,0 +1,218 @@
+@import "common/header";
+@import "common/footer";
+@import "common/coreCase";
+@import "common/coopIntention";
+@import "common/reset";
+@import "common/rightBar";
+
+.header .navList{
+    li:nth-child(7){
+        a {
+            color: #3176eb;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        &:hover {
+            a {
+                color: #3176eb;
+                margin-top: -70px;
+            }
+        }
+    }
+}
+
+
+.content {
+    min-width: 1200px;
+
+    .banner {
+        height: 450px;
+        position: relative;
+        overflow: hidden;
+
+        .bannerBg {
+            height: 450px;
+            display: block;
+        }
+
+        .commentBox {
+            width: 1200px;
+            margin: 0 auto;
+
+            .comment {
+                height: 410px;
+                position: absolute;
+                top: 0;
+                left: auto;
+                margin-left: 20px;
+                background: #3EB5E0;
+                color: #fff;
+                padding: 30px 10px;
+
+                h4 {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+
+                .commentForm {
+                    input {
+                        width: 140px;
+                        background: transparent;
+                        border: 1px solid #fff;
+                        padding: 10px 5px;
+                        color: #e2e2e2;
+                    }
+
+                    textarea {
+                        width: 302px;
+                        height: 120px;
+                        background: transparent;
+                        color: #e2e2e2;
+                        border: 1px solid #fff;
+                        padding: 10px;
+                        overflow: auto;
+                    }
+
+                    ::-webkit-input-placeholder {
+                        color: #e2e2e2;
+                    }
+
+                    ::-moz-placeholder {
+                        color: #e2e2e2;
+                    }
+
+                    .inputBox {
+                        margin-top: 30px;
+
+                        input {
+                            &:first-of-type {
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+
+                #submit {
+                    width: 100px;
+                    padding: 5px 0;
+                    text-align: center;
+                    margin-top: 30px;
+                    border: 1px solid #fff;
+                    display: block;
+
+                    &:hover {
+                        background: #2f99a8;
+                        border: 1px solid #2f99a8;
+                    }
+                }
+            }
+        }
+    }
+
+    .mainCon {
+        position: relative;
+        min-height: 480px;
+
+        .mainImg {
+            width: 100%;
+            display: block;
+        }
+
+        .contactText {
+            width: 1200px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -600px;
+
+            h3 {
+                text-align: center;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 40px;
+                margin: 40px 0;
+            }
+
+            .contactList {
+                margin-top: 80px;
+                .clearFix();
+
+                li {
+                    float: left;
+                    width: 22%;
+                    display: none;
+                    position: relative;
+
+                    &.not-first-of-type {
+                        margin-left: 4%;
+
+                        .text {
+                            p {
+                                &.not-first-of-type {
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        display: block;
+                    }
+
+                    .text {
+                        width: 100%;
+                        position: absolute;
+                        top: 140px;
+                        left: 0;
+                        text-align: center;
+
+                        p {
+                            line-height: 25px;
+
+                            &.first-of-type {
+                                line-height: 40px;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+
+                .img2,
+                .img4 {
+                    .text {
+                        p {
+                            &.not-first-of-type {
+                                margin-left: 65px;
+                            }
+                        }
+                    }
+                }
+
+                .img3 {
+                    .text {
+                        p {
+                            &.not-first-of-type {
+                                margin-left: 45px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

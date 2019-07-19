@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- title -->
+    <title><%= newsDetail.title %>_立信创源二维码营销/管理方案专家</title>
+    <% include common/title.ejs %>
+
+    <link rel="stylesheet" href="/plugs/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/newsDetail.css">
+</head>
+<body>
+    <div id="container">
+
+        <!-- 头部 -->
+        <% include common/header.ejs %>
+
+        <!-- 主体部分 -->
+        <div class="content">
+
+            <div class="top">
+                <img class="top-bg" src="/images/5/6_1.png">
+                <!--<div class="search-wra">
+                    <div class="form-key">
+                        <img class="search-img" src="/images/5/6_2.png" alt="">
+                        <input type="text" class="form-input" placeholder="输入您想了解的关键词">
+                    </div>
+                    <div class="form-btn">搜索</div>
+                </div>-->
+            </div>
+
+            <div class="conWrap">
+                <div class="titleBox">
+                    <div class="title">
+                        <a href="/dynamic-1.html">新闻资讯</a> <span><i class="fa fa-angle-right" aria-hidden="true"></i></span> <a href="/<%= type %>-1.html">
+                            <% if(type == "companyNews"){ %>
+                            公司新闻
+                            <% }else{ %>
+                            行业动态
+                            <% } %></a><span><i class="fa fa-angle-right" aria-hidden="true"></i></span><a href="#" class="active"><%= newsDetail.title %></a>
+                    </div>
+                </div>
+                <div class="con">
+                    <div class="conLeft">
+
+                        <div class="newsDetail">
+                            <h3><%= newsDetail.title %></h3>
+                            <div class="tt">
+                                <span>发表日期：<%= newsDetail.publishTime %></span><span>文章编辑：<%= newsDetail.author %></span><span>浏览次数：<%= newsDetail.browseNum %></span>
+                                <div class="share">
+                                    <div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+                                </div>
+                            </div>
+                            <p class="text">
+                                <%- newsDetail.content %>
+                            </p>
+                        </div>
+
+                        <div class="bottom">
+                            <% if(newsDetail.prevInfo && newsDetail.prevInfo.id){ %>
+                            <a href="/news-<%= type + '-' + newsDetail.prevInfo.id %>.html" class="prev">上一篇：<%= newsDetail.prevInfo.title %></a>
+                            <% } else { %>
+                            <a href="javascript:void (0);" class="prev">上一篇：没有了</a>
+                            <% } %>
+                            <% if(newsDetail.nextInfo && newsDetail.nextInfo.id){ %>
+                            <a href="/news-<%= type + '-' + newsDetail.nextInfo.id %>.html" class="next">下一篇：<%= newsDetail.nextInfo.title %></a>
+                            <% } else { %>
+                            <a href="javascript:void (0);" class="prev">下一篇：没有了</a>
+                            <% } %>
+
+                            <a class="backBtn" href="javascript:history.go(-1)">返回列表</a>
+                        </div>
+
+                    </div>
+
+                    <div class="conRight">
+                        <h3>相关新闻</h3>
+                        <% for(var i = 0; i < newsDetail.correlationNews.length; i++){ %>
+                        <div class="item">
+                            <a href="/news-<%= type %>-<%= newsDetail.correlationNews[i].id %>.html">
+                                <h4><%= newsDetail.correlationNews[i].title %></h4>
+
+                                <p><%- newsDetail.correlationNews[i].desc %></p>
+                            </a>
+                            <div class="dd">
+                                <span>日期：<%= newsDetail.correlationNews[i].publishTime %></span>
+                                <span>浏览次数：<%= newsDetail.correlationNews[i].browseNum %></span>
+                            </div>
+
+                        </div>
+                        <% } %>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 相关案例 -->
+            <% if (newsDetail.correlateCase.length > 0) { %>
+                <div class="core-case">
+                    <div class="content">
+                        <img class="case-tit" src="/images/10/3_16.png" />
+                        <div class="case-list">
+                            <% for (var i = 0; i < newsDetail.correlateCase.length; i++) { %>
+                                <% if (i < 2) { %>
+                                    <a class="case-item" href="<%= newsDetail.correlateCase[i].linkUrl %>">
+                                        <img src="<%= newsDetail.correlateCase[i].imgUrl %>" />
+                                        <div class="case-title"><%= newsDetail.correlateCase[i].title %></div>
+                                    </a>
+                                <% } else { %>
+                                    <a class="case-item" href="<%= newsDetail.correlateCase[i].linkUrl %>" style="margin-right: 0;">
+                                        <img src="<%= newsDetail.correlateCase[i].imgUrl %>" />
+                                        <div class="case-title"><%= newsDetail.correlateCase[i].title %></div>
+                                    </a>
+                                <% } %>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+
+        </div>
+
+        <!-- 侧边栏 -->
+        <% include common/rightBar.ejs %>
+
+        <!-- 底部 -->
+        <% include common/footer.ejs %>
+
+        <!-- 合作意向表 -->
+        <% include common/coopIntention.ejs %>
+    </div>
+</body>
+<script type="text/javascript" src="/js/lib/jquery.min.js"></script>
+<script src="/js/lib/backTop.js" type="text/javascript"></script>
+<script src="/js/lib/common.js" type="text/javascript"></script>
+<script src="/js/lib/rightBar.js" type="text/javascript"></script>
+<script src="/js/newsDetail.js" type="text/javascript"></script>
+
+<% include common/baidu.ejs %>
+
+<script>
+    main.init();
+</script>
+</html>

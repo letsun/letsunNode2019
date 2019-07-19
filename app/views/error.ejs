@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+    <link rel="stylesheet" type="text/css" href="/css/404.css">
+</head>
+<body>
+
+<div id="container">
+    <div class="wrapper">
+        <div class="img"><img src="/images/10_6.png" alt=""></div>
+        <div class="content">
+            <p>sorry</p>
+            <p>您访问的页面开小差了...</p>
+            <div>您可以通过以下方式继续访问...</div>
+            <a href="/">返回首页</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/lib/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        setTimeout(function() {
+            window.location.href = "/";
+        },500);
+    })
+</script>
+</body>
+</html>

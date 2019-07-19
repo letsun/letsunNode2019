@@ -1,0 +1,142 @@
+@import "reset";
+
+.footer {
+    min-width: 1200px;
+    background: #333;
+
+    .footerCon {
+        width: 1200px;
+        margin: 0 auto;
+        padding-top: 25px;
+        padding-bottom: 15px;
+
+        .clearFix();
+
+        .con-left {
+            float: left;
+
+            .left-logo {
+                width: 189px;
+                display: block;
+            }
+
+            .left-desc {
+                margin-top: 15px;
+
+                p {
+                    margin-bottom: 10px;
+
+                    line-height: 20px;
+                    color: #fff;
+                    font-size: 14px;
+                }
+
+                .phone-number {
+                    color: #3177eb;
+                }
+            }
+
+            .apply-use {
+                width: 120px;
+                height: 36px;
+                margin-top: 20px;
+                display: block;
+
+                line-height: 36px;
+                color: #fff;
+                font-size: 15px;
+                text-align: center;
+
+                background: #3177eb;
+            }
+        }
+
+        .con-right {
+            float: right;
+
+            .right-list {
+                .clearFix();
+
+                li {
+                    float: left;
+
+                    a {
+                        padding: 0 25px;
+                        display: block;
+
+                        line-height: 30px;
+                        color: #fff;
+                        font-size: 16px;
+                        text-align: center;
+
+                        &:hover {
+                            color: #3176eb;
+                        }
+                    }
+
+                    .right-second {
+                        margin-top: 10px;
+
+                        li {
+                            float: none;
+
+                            a {
+                                display: block;
+
+                                line-height: 30px;
+                                color: #999;
+                                font-size: 14px;
+                                text-align: center;
+
+                                &:hover {
+                                    color: #3176eb;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footerMark {
+        border-top: 1px solid #666;
+
+        .markCon {
+            width: 1200px;
+            margin: 0 auto;
+            padding: 10px 25px;
+
+            color: #fff;
+            font-size: 12px;
+
+            box-sizing: border-box;
+
+            h4 {
+                font-weight: 500;
+                line-height: 30px;
+
+                a {
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        .icp-bottom {
+            padding-top: 10px;
+
+            color: #fff;
+            font-size: 14px;
+            line-height: 30px;
+            text-align: center;
+
+            border-top: 1px solid #666;
+
+            .icp {
+                .statistics {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}

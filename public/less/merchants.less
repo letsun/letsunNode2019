@@ -1,0 +1,472 @@
+@import "common/header";
+@import "common/footer";
+@import "common/coreCase";
+@import "common/coopIntention";
+@import "common/reset";
+@import "common/swiper";
+@import "common/rightBar";
+
+html,body {
+	width: 100%;
+}
+body {
+	min-width: 1200px;
+}
+.header .navList{
+	li:nth-child(7){
+		a {
+			color: #3176eb;
+			font-size: 20px;
+			font-weight: 600;
+		}
+
+		&:hover {
+			a {
+				color: #3176eb;
+				margin-top: -70px;
+			}
+		}
+	}
+}
+
+#container {
+	width: 100%;
+}
+.top-img {
+	display: block;
+	width: 100%;
+}
+.content {
+	width: 100%;
+	margin: 0 auto;
+
+	/*先进技术研发，造就独特优势*/
+
+	.advantage-wra {
+		width: 100%;
+		padding: 86px 0 60px 0;
+
+		.advantage {
+			width: 1200px;
+			margin: 0 auto;
+
+			.advantage-title {
+				font-size: 28px;
+				line-height: 28px;
+				color: #000;
+				text-align: center;
+			}
+
+			.advantage-list {
+				width: 100%;
+				margin-top: 130px;
+
+				.clearFix();
+
+				.advantage-item {
+					position: relative;
+
+					float: left;
+
+					width: 400px;
+
+					.advantage-item-img {
+						display: block;
+						margin: 0 auto;
+					}
+
+					.advantage-item-title {
+						margin-top: 10px;
+
+						font-size: 18px;
+						line-height: 18px;
+						text-align: center;
+						color: #000;
+					}
+
+					.point {
+						position: absolute;
+						left: 195px;
+						top: 151px;
+						z-index: 10;
+
+						width: 10px;
+						height: 10px;
+
+
+						background: #c5c6ca;
+
+						border-radius: 50%;
+					}
+
+					.line {
+						width: 100%;
+						height: 0;
+						margin: 50px auto 22px auto;
+
+						border-top: 1px solid #c6c5ca;
+					}
+
+					.advantage-item-text {
+						font-size: 14px;
+						color: #333;
+						text-align: center;
+					}
+				}
+			}
+
+			.advantage-prop {
+				margin-top: 110px;
+
+				text-align: center;
+				font-size: 24px;
+				color: #000;
+				line-height: 24px;
+
+				span {
+					color: #3553c3;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	/*全面支持新零售，四大产品生态*/
+	.new-retail-wra {
+
+		width: 100%;
+		height: 750px;
+
+		background: url("../images/9/3.jpg") no-repeat center center;
+
+		.new-retail {
+			width: 1200px;
+			margin: 0 auto;
+
+			.new-retail-tilte {
+				padding-top: 86px;
+
+				font-size: 28px;
+				line-height: 28px;
+				color: #000;
+				text-align: center;
+			}
+
+			.new-retail-list {
+				width: 100%;
+				margin-top: 170px;
+
+				.clearFix();
+
+				.new-retail-item {
+					position: relative;
+
+					float: left;
+
+					width: 300px;
+
+					.new-retail-img {
+						display: block;
+						margin: 0 auto;
+					}
+
+					.new-retail-title {
+						margin-top: 10px;
+
+						font-size: 18px;
+						line-height: 18px;
+						text-align: center;
+						color: #000;
+						font-weight: 700;
+					}
+
+					.new-retail-text {
+						margin-top: 20px;
+
+						font-size: 16px;
+						line-height: 16px;
+						text-align: center;
+						color: #333;
+					}
+
+					.new-retail-dec {
+						margin-top: 10px;
+
+						font-size: 14px;
+						color: #333;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	/*超强盈利模式，掘金当下与未来*/
+	.profit-wra {
+		width: 100%;
+		padding: 86px 0 86px 0;
+
+		.profit {
+			width: 1200px;
+			margin: 0 auto;
+
+			.profit-tilte {
+				font-size: 28px;
+				line-height: 28px;
+				color: #000;
+				text-align: center;
+			}
+
+			.profit-list {
+				width: 100%;
+				margin-top: 140px;
+
+				.clearFix();
+
+				.profit-item {
+					position: relative;
+
+					float: left;
+
+					width: 300px;
+
+					.profit-img {
+						display: block;
+						margin: 0 auto;
+					}
+
+					.profit-title-wra {
+						margin-top: 70px;
+
+						.profit-title {
+							padding-top: 26px;
+
+							font-size: 18px;
+							line-height: 18px;
+							text-align: center;
+							color: #000;
+						}
+					}
+
+				}
+			}
+
+			.profit-prop-wra {
+				margin-top: 80px;
+
+				.clearFix();
+
+				.profit-prop {
+					float: right;
+
+					font-size: 18px;
+					line-height: 18px;
+					color: #3851c5;
+				}
+			}
+		}
+	}
+
+	/*严苛招商要求，保障合伙人利益*/
+	.claim-wra {
+		width: 100%;
+		padding: 86px 0 86px 0;
+
+		background: #3652c0;
+
+		.claim {
+			width: 1200px;
+			margin: 0 auto;
+
+			.claim-title {
+				font-size: 28px;
+				line-height: 28px;
+				color: #fff;
+				text-align: center;
+			}
+
+			.claim-list {
+				width: 1200px;
+				padding: 60px 0;
+				margin: 137px auto 0 auto;
+
+				.clearFix();
+
+				.claim-item {
+					position: relative;
+
+					float: left;
+
+					.claim-item-bg {
+						display: block;
+						width: 560px;
+					}
+
+					.claim-item-dec {
+						position: absolute;
+						left: 0;
+						top: 0;
+						z-index: 10;
+
+						width: 100%;
+						height: 100%;
+
+						text-align: center;
+
+						.claim-item-title {
+							padding: 113px 0 10px 0;
+
+							font-size: 28px;
+							line-height: 28px;
+							color: #3652c0;
+							font-weight: bold;
+						}
+
+						.claim-item-text {
+							padding-top: 36px;
+
+							font-size: 26px;
+							line-height: 26px;
+							color: #3b50c3;
+						}
+					}
+				}
+
+				.second-claim-item {
+					margin-left: -60px;
+				}
+			}
+		}
+	}
+
+	/*立体式系统支持，确保快速盈利*/
+	.stand-by-wra {
+		width: 100%;
+		padding: 86px 0;
+
+		.stand-by {
+			width: 1200px;
+			margin: 0 auto;
+
+			.stand-by-tilte {
+				font-size: 28px;
+				line-height: 28px;
+				color: #000;
+				text-align: center;
+			}
+
+			.stand-by-list {
+				width: 100%;
+				margin: 136px auto 0 auto;
+
+				.clearFix();
+
+				.stand-by-item {
+					float: left;
+
+					width: 300px;
+					padding: 80px 0 100px 0;
+
+					.stand-by-item-tilte {
+						padding: 44px 0 24px 0;
+
+						font-size: 24px;
+						font-weight: bold;
+						line-height: 24px;
+						text-align: center;
+					}
+
+					.stand-by-item-dec-wra {
+
+						.stand-by-item-dec {
+							padding-top: 30px;
+
+							font-size: 22px;
+							line-height: 22px;
+							text-align: center;
+						}
+					}
+				}
+
+				.blue-by-item {
+					background: #3652c0;
+
+					.stand-by-item-tilte {
+						color: #fff;
+					}
+
+					.stand-by-item-dec-wra {
+
+						.stand-by-item-dec {
+							color: #fff;
+						}
+					}
+				}
+
+				.white-by-item {
+					background: #f7f7f7;
+
+					.stand-by-item-tilte {
+						color: #000;
+					}
+
+					.stand-by-item-dec-wra {
+
+						.stand-by-item-dec {
+							color: #000;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.ani1 {
+	animation: ani1 1s forwards;
+	-webkit-animation: ani1 1s forwards;
+	-moz-animation: ani1 1s forwards;
+	-ms-animation: ani1 1s forwards;
+	-o-animation: ani1 1s forwards;
+}
+
+@-webkit-keyframes ani1 {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes ani1 {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes ani1 {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes ani1 {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
