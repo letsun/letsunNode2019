@@ -25,10 +25,54 @@ var router = express.Router();
 router.get("/", index);
 
 /* 手机端页面 */
-router.get("/indexPhone.html", function(req, res) {
-	//res.send("ok");
-	res.render("indexPhone");
+router.get("/phoneaboutUs.html", function(req, res) {
+	res.render("phoneaboutUs");
 });
+
+router.get("/phonecaseDetail.html", function(req, res) {
+    res.render("phonecaseDetail");
+});
+
+router.get("/phonecaseList.html", function(req, res) {
+    res.render("phonecaseList");
+});
+
+router.get("/phoneewmzs.html", function(req, res) {
+    res.render("phoneewmzs");
+});
+
+router.get("/phonefch.html", function(req, res) {
+    res.render("phonefch");
+});
+
+router.get("/phoneindex.html", function(req, res) {
+    res.render("phoneindex");
+});
+
+router.get("/phonenews.html", function(req, res) {
+    res.render("phonenews");
+});
+
+router.get("/phonenewsDetail.html", function(req, res) {
+    res.render("phonenewsDetail");
+});
+
+router.get("/phoneqdlt.html", function(req, res) {
+    res.render("phoneqdlt");
+});
+
+router.get("/phonesczs.html", function(req, res) {
+    res.render("phonesczs");
+});
+
+router.get("/phonesolution.html", function(req, res) {
+    res.render("phonesolution");
+});
+
+router.get("/phonezhyx.html", function(req, res) {
+    res.render("phonezhyx");
+});
+
 
 /* 新闻列表 */
 router.get("/dynamic-*.html", news);

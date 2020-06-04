@@ -334,7 +334,6 @@ textarea {
   border-top: 1px solid #666;
 }
 .footer .footerMark .markCon {
-  display: none;
   width: 1200px;
   margin: 0 auto;
   padding: 10px 25px;
@@ -933,7 +932,6 @@ body {
   float: left;
   display: block;
   width: 636px;
-  height: 214px;
   margin-left: 50px;
 }
 .content .banner2 {

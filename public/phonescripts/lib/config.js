@@ -1,0 +1,4 @@
+var ip = '';
+var config = {
+
+};

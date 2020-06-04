@@ -650,7 +650,7 @@ body {
   z-index: 10;
   display: none;
   padding: 0 30px;
-  background: url('https://pop.letsun.com.cn/letsunImage/phone/1/1_15.png') no-repeat;
+  background: url('https://h5.ebiaoji.com/letsunImage/phone/1/1_15.png') no-repeat;
   background-size: 100% 100%;
 }
 #container .header .cate-list .cate-item {
@@ -670,7 +670,7 @@ body {
   color: #1a2d6f;
 }
 #container .wp {
-  background: url('https://pop.letsun.com.cn/letsunImage/phone/bg.png') no-repeat;
+  background: url('https://h5.ebiaoji.com/letsunImage/phone/bg.png') no-repeat;
   background-size: 100% 100%;
 }
 #container .wp .page1 {
@@ -1142,7 +1142,7 @@ body {
   width: 80%;
   height: 71%;
   padding: 10px 0;
-  background: url("https://pop.letsun.com.cn/letsunImage/phone/10/10_2.png");
+  background: url("https://h5.ebiaoji.com/letsunImage/phone/10/10_2.png");
   background-size: 100% 100%;
   box-sizing: border-box;
 }
@@ -1249,9 +1249,9 @@ body {
 }
 #container .wechat-mask .wechat-img {
   position: absolute;
-  top: 30%;
-  left: 15%;
-  width: 70%;
+  top: 35%;
+  left: 23%;
+  width: 54%;
 }
 #cnzz_stat_icon_1261139545 {
   display: none;

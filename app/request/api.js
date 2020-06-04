@@ -1,9 +1,8 @@
 var main = {};
 
-// var baseUrl = "http://test-iwsct2.ebiaoji.com/letsun/gw/json/";
+//var baseUrl = "http://test-iwsct2.ebiaoji.com/letsun/gw/json/";
 // var baseUrl = "http://192.168.1.27:8081/letsun/gw/json/";
 var baseUrl = "https://mobile.letsun.com.cn/letsun/gw/json/";
-// var baseUrl = "http://192.168.1.27:8081/letsun/gw/json/";
 
 main.url = {
 	common: baseUrl + "common",
