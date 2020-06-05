@@ -6,6 +6,12 @@ var type = 2; // 类型（1为 公司新闻，2为 行业动态）
 var budget; // 预算
 var messageList = []; // 留言信息列表
 
+var swiper = new Swiper('.swiper-container', {
+		loop: true,
+		autoplay: 2000,
+		pagination: '.swiper-pagination',
+	});
+
 $(function() {
 	//右上角按钮切换
 	$(".header .nav-wra .nav-btn").click(function() {
@@ -15,36 +21,36 @@ $(function() {
 	})
 	
 	// 后台上传的轮播图
-	$.ajax({
-		url: baseUrl + "banner", // 数据接口
-		type: 'GET',
-		success: function(res) {
-			if (res.code === '200') {
-				var data = res.result.homeImgList;
-				console.log(data)
-
-				var html = '';
-				for (var i = 0; i < data.length; i++) {
-					html += '<div class="swiper-slide">'
-					html += '<a href="' + data[i].url + '"><img src="' + data[i].imgUrl + '" alt=""></a>'
-					html += '</div>'
-				}
-				$('.swiper-wrapper').append(html);
-
-				// 初始化banner
-				var swiper = new Swiper('.swiper-container', {
-					loop: true,
-					autoplay: 2000,
-					pagination: '.swiper-pagination',
-				});
-			} else {
-				common.alert({
-					content: res.msg,
-					mask: true
-				});
-			}
-		}
-	});
+	// $.ajax({
+	// 	url: baseUrl + "banner", // 数据接口
+	// 	type: 'GET',
+	// 	success: function(res) {
+	// 		if (res.code === '200') {
+	// 			var data = res.result.homeImgList;
+	// 			console.log(data);
+    //
+	// 			var html = '';
+	// 			for (var i = 0; i < data.length; i++) {
+	// 				html += '<div class="swiper-slide">';
+	// 				html += '<a href="' + data[i].url + '"><img src="' + data[i].imgUrl + '" alt=""></a>'
+	// 				html += '</div>'
+	// 			}
+	// 			$('.swiper-wrapper').append(html);
+    //
+	// 			// 初始化banner
+	// 			var swiper = new Swiper('.swiper-container', {
+	// 				loop: true,
+	// 				autoplay: 2000,
+	// 				pagination: '.swiper-pagination',
+	// 			});
+	// 		} else {
+	// 			common.alert({
+	// 				content: res.msg,
+	// 				mask: true
+	// 			});
+	// 		}
+	// 	}
+	// });
 
 	//智慧营销选项卡
 	$(".module2 .tab-wrap .tab-title li").click(function() {
@@ -124,20 +130,20 @@ $(function() {
 	// 填写信息关闭按钮
 	$('.close-demand').on('click', function() {
 		$('.demand-win').hide();
-	})
+	});
 	
 	// 申请试用按钮
 	$('.apply-btn').on('click', function() {
 		$('body').css('overflow','hidden');
 		$('.demand-win').show();
-	})
+	});
 	
 	// tab切换
 	$('.check-item').on('click', function() {
 		
 		$(this).addClass('active').siblings().removeClass('active');
 		budget = $(this).find('.check-text').html();
-	})
+	});
 	
 	// select-item选中留言内容
 	$('.select-item').on('click', function() {
@@ -158,7 +164,7 @@ $(function() {
 			// console.log(messageList);
 		}
 		
-	})
+	});
 	
 	// 点击提交需求 submit-btn
 	$('.submit-btn').on('click', function() {
@@ -167,7 +173,6 @@ $(function() {
 		let name = $('.name').val();
 		let mobile = $('.mobile').val();
 		let comment = messageList.join(',');
-		console.log(comment)
 		
 		if(company == ''){
 			common.alert({
@@ -238,7 +243,7 @@ $(function() {
 				}
 			}
 		});
-	})
+	});
 
 
 	indexNews();
@@ -266,7 +271,7 @@ $(function() {
 					html += '	</div>'
 					html += '</li>'
 
-					for (var i = 0; i < 3; i++) {
+					for (var i = 1; i < 4; i++) {
 						html += '<li>'
 						html += '	<div class="news-title">' + newsList[i].title + '</div>'
 						html += '	<div class="news-content">' + newsList[i].desc + '</div>'
@@ -288,4 +293,4 @@ $(function() {
 			}
 		});
 	}
-})
+});

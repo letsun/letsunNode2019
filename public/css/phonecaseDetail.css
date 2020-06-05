@@ -593,3 +593,15 @@ body {
   display: block;
   margin: 76px auto 0 auto;
 }
+
+.backTop {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 99;
+  display: none;
+  width: 13%;
+  cursor: pointer;
+  -webkit-animation: shanShuo 0.9s linear infinite alternate;
+  animation: shanShuo 0.9s linear infinite alternate;
+}

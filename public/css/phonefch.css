@@ -604,3 +604,15 @@ body {
   background: url('../phoneimages/2_61.png') no-repeat;
   background-size: 100% 100%;
 }
+
+.backTop {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 99;
+  display: none;
+  width: 13%;
+  cursor: pointer;
+  -webkit-animation: shanShuo 0.9s linear infinite alternate;
+  animation: shanShuo 0.9s linear infinite alternate;
+}

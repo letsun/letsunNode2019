@@ -135,6 +135,7 @@ $(function () {
 	});
 
 	scrollWra.on('pullingUp', () => {
+		// $('.backTop').show();
 		// if(page * 10 >= caseNum){
 		// 	hasNext = false;
 		// }
@@ -208,5 +209,21 @@ $(function () {
 		scrollWra.finishPullUp();
 		scrollWra.refresh();
 	}
+	
+	
+	// 返回顶部
+	$('#backTop').on('click',function () {
+		$(this).hide();
+        scrollWra.scrollTo(0,0,1000);
+    });
+
+	var height = $(window).innerHeight();
+    scrollWra.on('scroll',res=>{
+    	if (Math.abs(res.y) >= height) {
+            $('#backTop').show();
+		} else {
+            $('#backTop').hide();
+		}
+	})
 
 });

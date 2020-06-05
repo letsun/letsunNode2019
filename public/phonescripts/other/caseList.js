@@ -258,4 +258,20 @@ $(function() {
 		scrollWra.refresh();
 	}
 
+
+    // 返回顶部
+    $('#backTop').on('click',function () {
+        $(this).hide();
+        scrollWra.scrollTo(0,0,1000);
+    });
+
+    var height = $(window).innerHeight();
+    scrollWra.on('scroll',res=>{
+        if (Math.abs(res.y) >= height) {
+            $('#backTop').show();
+        } else {
+            $('#backTop').hide();
+        }
+    })
+
 });

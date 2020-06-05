@@ -1,6 +1,16 @@
 var baseUrl = "https://mobile.letsun.com.cn/letsun/gw/json/";
 var id;
 
+var imgList = [
+	'/phoneimages/8_5.png',
+	'/phoneimages/8_6.png',
+	'/phoneimages/8_7.png',
+	'/phoneimages/8_8.png',
+	'/phoneimages/8_9.png',
+	'/phoneimages/8_10.png',
+	'/phoneimages/8_11.png',
+];
+
 $(function () {
 	//右上角按钮切换
 	$(".header .nav-wra .nav-btn").click(function () {
@@ -60,7 +70,7 @@ $(function () {
 					
 					$('.toggle-icon-wrap').html(html);
 					$('.right-info').html(html1)
-					$('#bgImg').attr("src",res.result.bgImg)
+					$('#bgImg').attr("src",imgList[index]);
 					$('#title').html(res.result.title);
 					$('#desc').html(res.result.desc);
 					$('#policyReq').html(res.result.policyReq);
@@ -70,9 +80,5 @@ $(function () {
 		});
 
 	}
-
-
-
-
 })
 
